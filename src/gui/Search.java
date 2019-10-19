@@ -6,11 +6,10 @@ import util.Count;
 import util.XMLParser;
 
 import java.awt.*;
-import java.awt.event.KeyEvent;
-import java.awt.event.KeyListener;
+import java.awt.event.*;
 import java.util.List;
 
-public class Search extends JPanel implements KeyListener {
+public class Search extends JPanel implements KeyListener, ActionListener, MouseListener {
     List<Count> data;
     JList countList;
     JTextField searchField;
@@ -50,5 +49,35 @@ public class Search extends JPanel implements KeyListener {
     @Override
     public void keyReleased(KeyEvent e) {
         getData(searchField.getText());
+    }
+
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        
+    }
+
+    @Override
+    public void mouseClicked(MouseEvent e) {
+
+    }
+
+    @Override
+    public void mousePressed(MouseEvent e) {
+
+    }
+
+    @Override
+    public void mouseReleased(MouseEvent e) {
+
+    }
+
+    @Override
+    public void mouseEntered(MouseEvent e) {
+
+    }
+
+    @Override
+    public void mouseExited(MouseEvent e) {
+
     }
 }

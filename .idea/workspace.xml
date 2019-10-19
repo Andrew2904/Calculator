@@ -6,7 +6,14 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="52209253-6fa0-4455-a39e-1b177776e360" name="Default Changelist" comment="" />
+    <list default="true" id="52209253-6fa0-4455-a39e-1b177776e360" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/gui/AddDialog.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/gui/FinalSentence.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/gui/FineSentence.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/gui/JailSentence.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/Search.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/Search.java" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,7 +27,11 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1SIDSMDQeK8ajZswvSAhb9vasBT" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15429688" />
@@ -60,5 +71,16 @@
       <updated>1571242214032</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
