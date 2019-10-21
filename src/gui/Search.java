@@ -27,9 +27,14 @@ public class Search extends JPanel implements KeyListener, ActionListener, Mouse
 
         getData("");
 
+        JButton addButton = new JButton();
+        addButton.setText("Adauga fapta");
+        addButton.addActionListener(this);
+
         JScrollPane countScroller = new JScrollPane(countList);
         this.add(searchField, BorderLayout.NORTH);
         this.add(countScroller, BorderLayout.CENTER);
+        this.add(addButton, BorderLayout.SOUTH);
     }
 
     private void getData(String term){
@@ -53,7 +58,7 @@ public class Search extends JPanel implements KeyListener, ActionListener, Mouse
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        
+        AddDialog.showDialog();
     }
 
     @Override
