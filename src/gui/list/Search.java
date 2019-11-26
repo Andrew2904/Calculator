@@ -1,7 +1,8 @@
-package gui;
+package gui.list;
 
 import javax.swing.*;
 
+import gui.AddDialog;
 import util.Count;
 import util.XMLParser;
 

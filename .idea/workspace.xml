@@ -7,13 +7,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="52209253-6fa0-4455-a39e-1b177776e360" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/util/Sentence.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/gui/ExportDialog.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/gui/ImportDialog.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Calculator/gui/Search.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Calculator/gui/Search.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Calculator_jar/Calculator.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Calculator_jar/Calculator.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Calculator/gui/AddDialog.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Calculator/gui/AddDialog.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Calculator/gui/Calculator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Calculator/gui/Calculator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Calculator/gui/FinalSentence.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Calculator/gui/FinalSentence.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Calculator/gui/MainSentence.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Calculator/gui/MainSentence.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Calculator/gui/PastSentence.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Calculator/gui/PastSentence.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Calculator/gui/Search.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Calculator/util/Count.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Calculator/util/Count.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Calculator/util/Sentence.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Calculator/util/Sentence.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Calculator/util/XMLParser.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Calculator/util/XMLParser.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/gui/AddDialog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/AddDialog.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/FineSentence.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/MainSentence.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/JailSentence.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/PastSentence.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/Search.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/Search.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/Calculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/Calculator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/Search.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/list/Search.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -32,9 +44,14 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1SIDSMDQeK8ajZswvSAhb9vasBT" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="PropertiesComponent">
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/out/artifacts/Calculator_jar/Calculator.jar" />
+    <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15429688" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
@@ -51,14 +68,26 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.Calculator">
     <configuration name="Calculator" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="1.8" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="MAIN_CLASS_NAME" value="gui.Calculator" />
       <module name="Calculator" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Unnamed" type="JarApplication" nameIsGenerated="true">
+      <option name="JAR_PATH" value="$PROJECT_DIR$/out/artifacts/Calculator_jar/Calculator.jar" />
+      <option name="WORKING_DIRECTORY" value="F:\Programare\Testing\Calculator" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Application.Calculator" />
+      <item itemvalue="JAR Application.Unnamed" />
+    </list>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -70,8 +99,13 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1571242214032</updated>
+      <workItem from="1574708116264" duration="2383000" />
+      <workItem from="1574755269087" duration="5181000" />
     </task>
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
