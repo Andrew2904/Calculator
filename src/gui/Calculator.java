@@ -1,12 +1,14 @@
 package gui;
 
-import gui.list.Search;
-
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+//TO DO: deschis fisier recent la initializare
+//TO DO: creat fisier la inchiderea programului
+//TO DO: completat fereastra pentru user
+//TO DO: instantiat lista de fapte+import
 public class Calculator extends JFrame implements ActionListener {
     public Calculator(){
         JPanel content = (JPanel) this.getContentPane();
@@ -71,7 +73,20 @@ public class Calculator extends JFrame implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         try{
             JMenuItem source = (JMenuItem) e.getSource();
-            System.out.println(source.getText());
+            String text = source.getText();
+            if(text.equals("Ajutor"))
+                JOptionPane.showMessageDialog(this, "Placeholder pentru ajutor", "Ajutor", JOptionPane.INFORMATION_MESSAGE);
+            else
+            if(text.equals("Iesire"))
+                System.exit(0);
+            else
+            if(text.equals("Import..."))
+                ;//ImportDialog.showDialog(this, "Alegere fisier");
+            else
+            if(text.equals("Export..."))
+                ExportDialog.showDialog();
+            else
+                return;
         }catch (Exception ex){
             System.err.println(ex.getMessage());
         }

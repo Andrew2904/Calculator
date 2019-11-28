@@ -1,6 +1,120 @@
-<Fapte>
+<Fapte data="25-11-2019">
     <Fapta>
         <Denumire>Fapta 1</Denumire>
+        <Inchisoare>100</Inchisoare>
+        <Amenda>100</Amenda>
+        <Editare>25-11-2019</Editare>
+    </Fapta>
+	<Fapta>
+        <Denumire>Fapta 2</Denumire>
+        <Inchisoare>100</Inchisoare>
+        <Amenda>100</Amenda>
+        <Editare>25-11-2019</Editare>
+    </Fapta>
+	<Fapta>
+        <Denumire>Fapta 3</Denumire>
+        <Inchisoare>100</Inchisoare>
+        <Amenda>100</Amenda>
+        <Editare>25-11-2019</Editare>
+    </Fapta>
+	<Fapta>
+        <Denumire>Fapta 4</Denumire>
+        <Inchisoare>100</Inchisoare>
+        <Amenda>100</Amenda>
+        <Editare>25-11-2019</Editare>
+    </Fapta>
+	<Fapta>
+        <Denumire>Fapta 5</Denumire>
+        <Inchisoare>100</Inchisoare>
+        <Amenda>100</Amenda>
+        <Editare>25-11-2019</Editare>
+    </Fapta>
+	<Fapta>
+        <Denumire>Fapta 6</Denumire>
+        <Inchisoare>100</Inchisoare>
+        <Amenda>100</Amenda>
+        <Editare>25-11-2019</Editare>
+    </Fapta>
+	<Fapta>
+        <Denumire>Fapta 7</Denumire>
+        <Inchisoare>100</Inchisoare>
+        <Amenda>100</Amenda>
+        <Editare>25-11-2019</Editare>
+    </Fapta>
+	<Fapta>
+        <Denumire>Fapta 8</Denumire>
+        <Inchisoare>100</Inchisoare>
+        <Amenda>100</Amenda>
+        <Editare>25-11-2019</Editare>
+    </Fapta>
+	<Fapta>
+        <Denumire>Fapta 9</Denumire>
+        <Inchisoare>100</Inchisoare>
+        <Amenda>100</Amenda>
+        <Editare>25-11-2019</Editare>
+    </Fapta>
+	<Fapta>
+        <Denumire>Fapta 10</Denumire>
+        <Inchisoare>100</Inchisoare>
+        <Amenda>100</Amenda>
+        <Editare>25-11-2019</Editare>
+    </Fapta>
+	<Fapta>
+        <Denumire>Fapta 11</Denumire>
+        <Inchisoare>100</Inchisoare>
+        <Amenda>100</Amenda>
+        <Editare>25-11-2019</Editare>
+    </Fapta>
+	<Fapta>
+        <Denumire>Fapta 12</Denumire>
+        <Inchisoare>100</Inchisoare>
+        <Amenda>100</Amenda>
+        <Editare>25-11-2019</Editare>
+    </Fapta>
+	<Fapta>
+        <Denumire>Fapta 13</Denumire>
+        <Inchisoare>100</Inchisoare>
+        <Amenda>100</Amenda>
+        <Editare>25-11-2019</Editare>
+    </Fapta>
+	<Fapta>
+        <Denumire>Fapta 14</Denumire>
+        <Inchisoare>100</Inchisoare>
+        <Amenda>100</Amenda>
+        <Editare>25-11-2019</Editare>
+    </Fapta>
+	<Fapta>
+        <Denumire>Fapta 15</Denumire>
+        <Inchisoare>100</Inchisoare>
+        <Amenda>100</Amenda>
+        <Editare>25-11-2019</Editare>
+    </Fapta>
+	<Fapta>
+        <Denumire>Fapta 16</Denumire>
+        <Inchisoare>100</Inchisoare>
+        <Amenda>100</Amenda>
+        <Editare>25-11-2019</Editare>
+    </Fapta>
+	<Fapta>
+        <Denumire>Fapta 17</Denumire>
+        <Inchisoare>100</Inchisoare>
+        <Amenda>100</Amenda>
+        <Editare>25-11-2019</Editare>
+    </Fapta>
+	<Fapta>
+        <Denumire>Fapta 18</Denumire>
+        <Inchisoare>100</Inchisoare>
+        <Amenda>100</Amenda>
+        <Editare>25-11-2019</Editare>
+    </Fapta>
+	<Fapta>
+        <Denumire>Fapta 19</Denumire>
+        <Inchisoare>100</Inchisoare>
+        <Amenda>100</Amenda>
+        <Editare>25-11-2019</Editare>
+    </Fapta>
+	<Fapta>
+        <Denumire>Fapta 20</Denumire>
         <Inchisoare>100</Inchisoare>
         <Amenda>100</Amenda>
         <Editare>25-11-2019</Editare>

@@ -7,25 +7,36 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="52209253-6fa0-4455-a39e-1b177776e360" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/demo.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/gui/ExportDialog.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/gui/ImportDialog.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/fine.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/fine2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/fine3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/fine4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/fine5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/jail.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/gui/list/CountRenderer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/util/ResourceManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Calculator_jar/Calculator.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Calculator_jar/Calculator.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Calculator.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Calculator.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo.xml" beforeDir="false" afterPath="$PROJECT_DIR$/demo.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Calculator/gui/AddDialog.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Calculator/gui/AddDialog.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Calculator/gui/Calculator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Calculator/gui/Calculator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Calculator/gui/ExportDialog.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Calculator/gui/ExportDialog.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Calculator/gui/FinalSentence.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Calculator/gui/FinalSentence.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Calculator/gui/ImportDialog.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Calculator/gui/ImportDialog.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Calculator/gui/MainSentence.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Calculator/gui/MainSentence.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Calculator/gui/PastSentence.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Calculator/gui/PastSentence.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Calculator/gui/Search.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Calculator/util/Count.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Calculator/util/Count.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Calculator/gui/list/Search.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Calculator/util/Count.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Calculator/util/Sentence.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Calculator/util/Sentence.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Calculator/util/XMLParser.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Calculator/util/XMLParser.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/gui/AddDialog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/AddDialog.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/gui/Calculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/Calculator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/Search.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/list/Search.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/ExportDialog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/ExportDialog.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/ImportDialog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/ImportDialog.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/list/Search.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/Search.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/util/Count.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/list/Count.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/util/XMLParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/util/XMLParser.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -50,11 +61,16 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/out/artifacts/Calculator_jar/Calculator.jar" />
-    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/res" />
+    <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15429688" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\Programare\Testing\Calculator\res" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -100,7 +116,11 @@
       <option name="presentableId" value="Default" />
       <updated>1571242214032</updated>
       <workItem from="1574708116264" duration="2383000" />
-      <workItem from="1574755269087" duration="5181000" />
+      <workItem from="1574755269087" duration="8391000" />
+      <workItem from="1574848104568" duration="8678000" />
+      <workItem from="1574947321183" duration="1810000" />
+      <workItem from="1574971770456" duration="916000" />
+      <workItem from="1574977382946" duration="3467000" />
     </task>
     <servers />
   </component>

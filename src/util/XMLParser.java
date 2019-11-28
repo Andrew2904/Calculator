@@ -1,5 +1,7 @@
 package util;
 
+import gui.list.Count;
+
 import java.util.ArrayList;
 import java.util.List;
 

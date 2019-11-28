@@ -1,4 +1,4 @@
-package util;
+package gui.list;
 
 import java.util.Date;
 

@@ -1,6 +1,6 @@
 package gui;
 
-import util.Count;
+import gui.list.Count;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;

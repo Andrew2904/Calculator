@@ -1,9 +1,10 @@
-package gui.list;
+package gui;
 
 import javax.swing.*;
 
 import gui.AddDialog;
-import util.Count;
+import gui.list.Count;
+import gui.list.CountRenderer;
 import util.XMLParser;
 
 import java.awt.*;
@@ -23,6 +24,7 @@ public class Search extends JPanel implements KeyListener, ActionListener, Mouse
 
         data = XMLParser.read("");
         countList = new JList();
+        countList.setCellRenderer(new CountRenderer());
         countList.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
         countList.setLayoutOrientation(JList.VERTICAL);
 
