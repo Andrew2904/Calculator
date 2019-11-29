@@ -1,14 +1,16 @@
 package util;
 
 import gui.list.Count;
-
-import java.util.ArrayList;
+import javax.xml.parsers.SAXParser;
+import javax.xml.parsers.SAXParserFactory;
+import java.io.File;
 import java.util.List;
 
 public class XMLParser {
     public static List<Count> read(String file){
-        List<Count> data = new ArrayList<Count>();
+        List<Count> data = null;
 
+        /*
         Count entry, base;
         String desc;
 
@@ -29,6 +31,20 @@ public class XMLParser {
 
             entry = new Count(base);
             data.add(entry);
+        }
+        */
+        Parser parser = null;
+        try {
+            SAXParserFactory factory = SAXParserFactory.newInstance();
+            SAXParser saxParser = factory.newSAXParser();
+            Handler handler = new Handler();
+
+            //System.out.println(new File("demo.xml").getAbsolutePath());
+            saxParser.parse(new File("demo.xml").getAbsolutePath(), handler);
+
+            data = handler.getList();
+        } catch (Exception e) {
+            System.err.println(e.getMessage());
         }
 
         return data;

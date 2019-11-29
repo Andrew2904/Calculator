@@ -18,10 +18,16 @@ public class CountRenderer extends JPanel implements ListCellRenderer<Count> {
 
         //setText(value.toString());
         setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
-        JLabel jailLabel, fineLabel, lastLabel;
+        JLabel descLabel, jailLabel, fineLabel, lastLabel;
+        descLabel = new JLabel();
         jailLabel = new JLabel();
         fineLabel = new JLabel();
         lastLabel = new JLabel();
+
+        if(value.desc.length()>20)
+            descLabel.setText(value.desc.substring(0, 20)+"...");
+        else
+            descLabel.setText(value.desc);
 
         String fineText, jailText;
         fineText = "";
@@ -44,9 +50,9 @@ public class CountRenderer extends JPanel implements ListCellRenderer<Count> {
 
         jailLabel.setText(jailText+value.jail);
         fineLabel.setText(fineText+value.fine);
-        lastLabel.setText(value.update.toString());
+        lastLabel.setText(value.date.toString());
 
-        add(new JLabel(value.desc));
+        add(descLabel);
         add(jailLabel);
         add(fineLabel);
         add(lastLabel);
