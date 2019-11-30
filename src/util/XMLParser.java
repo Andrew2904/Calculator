@@ -48,6 +48,7 @@ public class XMLParser {
             saxParser.parse(new File(file).getAbsolutePath(), handler);
 
             data = handler.getList();
+            last = handler.getLast();
         } catch (Exception e) {
             System.err.println(e.getMessage());
         }

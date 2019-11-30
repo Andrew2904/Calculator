@@ -49,6 +49,10 @@ public class Count {
         this.date = date;
     }
 
+    public void setDate(Date date){
+        this.date = format.format(date);
+    }
+
     public String getDesc() {
         return desc;
     }

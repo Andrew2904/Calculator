@@ -1,5 +1,8 @@
 package gui;
 
+import gui.dialog.ExportDialog;
+import gui.dialog.ImportDialog;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -90,7 +93,9 @@ public class Calculator extends JFrame implements ActionListener {
             }
             else
             if(text.equals("Export...")){
-                ExportDialog.showDialog();
+                ExportDialog ed = new ExportDialog();
+                ed.showDialog(this, "Export fisier");
+                //searchPanel.export(ed.getFile());
             }
             else
                 return;

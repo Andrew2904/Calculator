@@ -2,13 +2,14 @@ package gui;
 
 import javax.swing.*;
 
-import gui.AddDialog;
+import gui.dialog.AddDialog;
 import gui.list.Count;
 import gui.list.CountRenderer;
 import util.XMLParser;
 
 import java.awt.*;
 import java.awt.event.*;
+import java.util.ArrayList;
 import java.util.List;
 
 public class Search extends JPanel implements KeyListener, ActionListener, MouseListener {
@@ -22,6 +23,8 @@ public class Search extends JPanel implements KeyListener, ActionListener, Mouse
         this.setBackground(Color.BLACK);
         searchField = new JTextField();
         searchField.addKeyListener(this);
+
+        data = new ArrayList<Count>();
 
         parser = new XMLParser();
 
@@ -70,7 +73,9 @@ public class Search extends JPanel implements KeyListener, ActionListener, Mouse
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        AddDialog.showDialog();
+        AddDialog ad = new AddDialog();
+        ad.showDialog();
+        data.add(ad.getAdded());
     }
 
     @Override

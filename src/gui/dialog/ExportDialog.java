@@ -1,10 +1,10 @@
-package gui;
+package gui.dialog;
 
 import javax.swing.*;
 import javax.swing.filechooser.FileNameExtensionFilter;
 import java.io.File;
 
-public class ImportDialog extends JDialog {
+public class ExportDialog {
     String file;
 
     public void showDialog(JFrame parent, String caption){
@@ -13,7 +13,7 @@ public class ImportDialog extends JDialog {
         fc.setFileFilter(xmlfilter);
         fc.setCurrentDirectory(new File("."));
 
-        fc.showDialog(parent, caption);
+        fc.showSaveDialog(parent);
 
         System.out.println(fc.getSelectedFile());
         file = fc.getSelectedFile().getAbsolutePath();

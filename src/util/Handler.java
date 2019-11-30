@@ -12,6 +12,7 @@ public class Handler extends DefaultHandler {
     boolean bDesc, bJail, bFine, bLast;
     List<Count> list;
     Count current;
+    String last;
 
     public Handler(){
         bDesc = false;
@@ -25,6 +26,7 @@ public class Handler extends DefaultHandler {
         switch (qName.toLowerCase()){
             case "fapte":
                 System.out.println("Fisier de la data de: "+attributes.getValue("data"));
+                last = attributes.getValue("data");
                 break;
             case "fapta":
                 current = new Count();
@@ -102,5 +104,9 @@ public class Handler extends DefaultHandler {
         }finally {
             return res;
         }
+    }
+
+    public String getLast(){
+        return last;
     }
 }
