@@ -4,12 +4,19 @@ import gui.list.Count;
 import javax.xml.parsers.SAXParser;
 import javax.xml.parsers.SAXParserFactory;
 import java.io.File;
+import java.util.Date;
 import java.util.List;
 
 public class XMLParser {
-    public static List<Count> read(String file){
-        List<Count> data = null;
+    List<Count> data;
+    String last;
 
+    public XMLParser(){
+        data = null;
+        last = Count.getFormat().format(new Date());
+    }
+
+    public void read(String file){
         /*
         Count entry, base;
         String desc;
@@ -33,20 +40,20 @@ public class XMLParser {
             data.add(entry);
         }
         */
-        Parser parser = null;
         try {
             SAXParserFactory factory = SAXParserFactory.newInstance();
             SAXParser saxParser = factory.newSAXParser();
             Handler handler = new Handler();
 
-            //System.out.println(new File("demo.xml").getAbsolutePath());
-            saxParser.parse(new File("demo.xml").getAbsolutePath(), handler);
+            saxParser.parse(new File(file).getAbsolutePath(), handler);
 
             data = handler.getList();
         } catch (Exception e) {
             System.err.println(e.getMessage());
         }
+    }
 
+    public List<Count> getData() {
         return data;
     }
 }

@@ -16,9 +16,14 @@ public class ImportDialog extends JDialog {
         fc.showDialog(parent, caption);
 
         System.out.println(fc.getSelectedFile());
+        file = fc.getSelectedFile().getAbsolutePath();
     }
 
     public void showDialog(String caption){
         showDialog(null, caption);
+    }
+
+    public String getFile(){
+        return file;
     }
 }

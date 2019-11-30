@@ -72,4 +72,8 @@ public class Count {
     public static void setFormat(String newFormat){
         format = new SimpleDateFormat(newFormat);
     }
+
+    public static SimpleDateFormat getFormat(){
+        return format;
+    }
 }

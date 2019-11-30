@@ -10,14 +10,17 @@ import java.awt.event.ActionListener;
 //TO DO: completat fereastra pentru user
 //TO DO: instantiat lista de fapte+import
 public class Calculator extends JFrame implements ActionListener {
+    Search searchPanel;
+    JPanel setupPanel, jailPanel, finePanel;
+
     public Calculator(){
         JPanel content = (JPanel) this.getContentPane();
         content.setLayout( new BoxLayout(content, BoxLayout.Y_AXIS) );
 
-        JPanel setupPanel, searchPanel, jailPanel, finePanel;
         setupPanel = new JPanel();
         setupPanel.setLayout( new BoxLayout(setupPanel, BoxLayout.X_AXIS) );
         searchPanel = new Search();
+        searchPanel.readDate("demo.xml");
 
         setupPanel.add(searchPanel);
         content.add(setupPanel);
@@ -80,11 +83,15 @@ public class Calculator extends JFrame implements ActionListener {
             if(text.equals("Iesire"))
                 System.exit(0);
             else
-            if(text.equals("Import..."))
-                ;//ImportDialog.showDialog(this, "Alegere fisier");
+            if(text.equals("Import...")){
+                ImportDialog id = new ImportDialog();
+                id.showDialog(this, "Alegere fisier");
+                searchPanel.readDate(id.getFile());
+            }
             else
-            if(text.equals("Export..."))
+            if(text.equals("Export...")){
                 ExportDialog.showDialog();
+            }
             else
                 return;
         }catch (Exception ex){
