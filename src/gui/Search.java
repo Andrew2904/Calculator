@@ -1,17 +1,22 @@
 package gui;
 
 import javax.swing.*;
+import javax.xml.stream.XMLOutputFactory;
+import javax.xml.stream.XMLStreamWriter;
 
 import gui.dialog.AddDialog;
 import gui.list.Count;
 import gui.list.CountRenderer;
+import org.xml.sax.SAXException;
 import util.XMLParser;
 
 import java.awt.*;
 import java.awt.event.*;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 
+//TO DO: Adaugat mesaje de eroare vizibile pentru user
 public class Search extends JPanel implements KeyListener, ActionListener, MouseListener {
     List<Count> data;
     JList countList;
@@ -58,6 +63,14 @@ public class Search extends JPanel implements KeyListener, ActionListener, Mouse
             if(entry.contains(term))
                 listData.addElement(entry);
         countList.setModel(listData);
+    }
+
+    public List<Count> getData(){
+        return data;
+    }
+
+    public String getLast(){
+        return parser.getLast();
     }
 
     @Override

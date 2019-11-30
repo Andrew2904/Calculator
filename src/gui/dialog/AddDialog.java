@@ -7,6 +7,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.Date;
 
+//TO DO: Tratat valori gresite vizibil pentru user
 public class AddDialog extends JDialog implements ActionListener{
     private Count added;
     private boolean accessible;
@@ -76,24 +77,24 @@ public class AddDialog extends JDialog implements ActionListener{
     private boolean validateInput(){
         accessible = true;
 
-        System.out.println( "Description: "+ descField.getText() );
+        //System.out.println( "Description: "+ descField.getText() );
         added.setDesc( descField.getText() );
         try{
             int jail = Integer.parseInt(jailField.getText());
-            System.out.println( "Jail(days): "+jail );
+            //System.out.println( "Jail(days): "+jail );
             added.setJail( jail );
         }catch (Exception ex){
             accessible = false;
-            System.out.println( "Jail(days): "+"WRONG" );
+            System.err.println( "Jail(days): "+"WRONG" );
         }
 
         try{
             float fine = Float.parseFloat(fineField.getText());
-            System.out.println( "Fine(RON): "+fine );
+            //System.out.println( "Fine(RON): "+fine );
             added.setFine( fine );
         }catch (Exception ex){
             accessible = false;
-            System.out.println( "Fine(RON): "+"WRONG" );
+            System.err.println( "Fine(RON): "+"WRONG" );
         }
 
         added.setDate(new Date());

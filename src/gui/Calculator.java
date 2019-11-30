@@ -94,8 +94,8 @@ public class Calculator extends JFrame implements ActionListener {
             else
             if(text.equals("Export...")){
                 ExportDialog ed = new ExportDialog();
-                ed.showDialog(this, "Export fisier");
-                //searchPanel.export(ed.getFile());
+                //ed.showDialog(this, "Export fisier");
+                ed.export(searchPanel.getData());
             }
             else
                 return;

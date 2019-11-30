@@ -13,7 +13,7 @@ public class XMLParser {
 
     public XMLParser(){
         data = null;
-        last = Count.getFormat().format(new Date());
+        last = Count.format(new Date());
     }
 
     public void read(String file){
@@ -56,5 +56,9 @@ public class XMLParser {
 
     public List<Count> getData() {
         return data;
+    }
+
+    public String getLast(){
+        return last;
     }
 }

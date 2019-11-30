@@ -65,6 +65,10 @@ public class Count {
         return fine;
     }
 
+    public String getDate(){
+        return date;
+    }
+
     public String toString(){
         return desc;
     }
@@ -77,7 +81,7 @@ public class Count {
         format = new SimpleDateFormat(newFormat);
     }
 
-    public static SimpleDateFormat getFormat(){
-        return format;
+    public static String format(Date date){
+        return format.format(date);
     }
 }
