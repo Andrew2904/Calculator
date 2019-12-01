@@ -49,6 +49,7 @@ public class ExportDialog {
 
             out.writeStartElement("Fapte");
             out.writeAttribute("data", Count.format(new Date()));
+            out.writeCharacters(System.getProperty("line.separator"));
 
             //TO DO: Actualizeaza progress bar aici
             for(int i=0;i<data.size();i++){

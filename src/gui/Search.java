@@ -24,7 +24,7 @@ public class Search extends JPanel implements KeyListener, ActionListener, Mouse
     XMLParser parser;
 
     public Search(){
-        this.setLayout( new BorderLayout() );
+        this.setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
         this.setBackground(Color.BLACK);
         searchField = new JTextField();
         searchField.addKeyListener(this);
@@ -38,25 +38,39 @@ public class Search extends JPanel implements KeyListener, ActionListener, Mouse
         countList.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
         countList.setLayoutOrientation(JList.VERTICAL);
 
+        JPanel listPanel = new JPanel();
+        JPanel buttonPanel = new JPanel();
+        listPanel.setLayout( new BorderLayout() );
+        buttonPanel.setLayout(new GridLayout(0, 1, 0, 4));
+
         JButton addButton = new JButton();
         addButton.setText("Adauga fapta");
         addButton.addActionListener(this);
 
+        JButton removeButton = new JButton();
+        removeButton.setText("Sterge fapta");
+        removeButton.addActionListener(this);
+
         JScrollPane countScroller = new JScrollPane(countList);
-        this.add(searchField, BorderLayout.NORTH);
-        this.add(countScroller, BorderLayout.CENTER);
-        this.add(addButton, BorderLayout.SOUTH);
+        listPanel.add(searchField, BorderLayout.NORTH);
+        listPanel.add(countScroller, BorderLayout.CENTER);
+        this.add(listPanel);
+        buttonPanel.add(addButton, BorderLayout.SOUTH);
+        buttonPanel.add(removeButton, BorderLayout.SOUTH);
+        this.add(buttonPanel);
     }
 
     public void readDate(String source){
-        parser.read("demo.xml");
+        parser.read(source);
         data = parser.getData();
-        getData("");
+        getData();
     }
 
-    private void getData(String term){
+    private void getData(){
         if(data == null)
             return;
+
+        String term = searchField.getText();
 
         DefaultListModel listData = new DefaultListModel();
         for(Count entry:data)
@@ -65,7 +79,7 @@ public class Search extends JPanel implements KeyListener, ActionListener, Mouse
         countList.setModel(listData);
     }
 
-    public List<Count> getData(){
+    public List<Count> getList(){
         return data;
     }
 
@@ -81,14 +95,26 @@ public class Search extends JPanel implements KeyListener, ActionListener, Mouse
 
     @Override
     public void keyReleased(KeyEvent e) {
-        getData(searchField.getText());
+        getData();
     }
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        AddDialog ad = new AddDialog();
-        ad.showDialog();
-        data.add(ad.getAdded());
+        JButton source = (JButton) e.getSource();
+        switch (source.getText()){
+            case "Adauga fapta":
+                AddDialog ad = new AddDialog();
+                ad.showDialog();
+                data.add(ad.getAdded());
+                getData();
+                break;
+            case "Sterge fapta":
+                data.remove(countList.getSelectedIndex());
+                getData();
+                break;
+            default:
+                return;
+        }
     }
 
     @Override

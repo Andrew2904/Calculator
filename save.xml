@@ -1,16 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Fapte data="30-11-2019"><Fapta>
-<Denumire>Fapta 1. Supercalifragilistic 1. Supercalifragilistic 2. Supercalifragilistic 3. Supercalifragilistic 4. </Denumire>
-<Inchisoare>101</Inchisoare>
-<Amenda>100.0</Amenda>
-<Editare>25-11-2019</Editare>
-</Fapta>
-<Fapta>
-<Denumire>Fapta 1. Supercalifragilistic 2.</Denumire>
-<Inchisoare>102</Inchisoare>
-<Amenda>100.0</Amenda>
-<Editare>25-11-2019</Editare>
-</Fapta>
+<Fapte data="01-12-2019">
 <Fapta>
 <Denumire>Fapta 3</Denumire>
 <Inchisoare>103</Inchisoare>

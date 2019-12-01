@@ -7,22 +7,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="52209253-6fa0-4455-a39e-1b177776e360" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo.xml" beforeDir="false" afterPath="$PROJECT_DIR$/demo.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Calculator/gui/Calculator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Calculator/gui/Calculator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Calculator/gui/Search.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Calculator/gui/Search.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Calculator/gui/dialog/AddDialog.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Calculator/gui/dialog/AddDialog.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Calculator/gui/dialog/ExportDialog.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Calculator/gui/dialog/ExportDialog.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Calculator/gui/list/Count.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Calculator/gui/list/Count.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Calculator/util/XMLParser.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Calculator/util/XMLParser.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/save.xml" beforeDir="false" afterPath="$PROJECT_DIR$/save.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/gui/Calculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/Calculator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/gui/Search.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/Search.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/dialog/AddDialog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/dialog/AddDialog.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/gui/dialog/ExportDialog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/dialog/ExportDialog.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/list/Count.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/list/Count.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/dialog/ImportDialog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/dialog/ImportDialog.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/util/XMLParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/util/XMLParser.java" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -42,6 +35,11 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -58,21 +56,9 @@
       <recent name="F:\Programare\Testing\Calculator\res" />
     </key>
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
-  </component>
   <component name="RunManager" selected="Application.Calculator">
     <configuration name="Calculator" type="Application" factoryName="Application" nameIsGenerated="true">
-      <option name="ALTERNATIVE_JRE_PATH" value="9" />
+      <option name="ALTERNATIVE_JRE_PATH" value="1.8" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="MAIN_CLASS_NAME" value="gui.Calculator" />
       <module name="Calculator" />
@@ -90,6 +76,18 @@
       <item itemvalue="Application.Calculator" />
       <item itemvalue="JAR Application.Unnamed" />
     </list>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -109,6 +107,8 @@
       <workItem from="1574977382946" duration="5044000" />
       <workItem from="1575026707657" duration="14963000" />
       <workItem from="1575110706483" duration="15845000" />
+      <workItem from="1575210417481" duration="201000" />
+      <workItem from="1575210946511" duration="7632000" />
     </task>
     <servers />
   </component>
@@ -127,5 +127,58 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="94" y="146" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1575216453081">
+      <screen x="0" y="0" width="1280" height="984" />
+    </state>
+    <state x="94" y="146" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.984@0.0.1280.984" timestamp="1575216453081" />
+    <state x="445" y="200" key="#com.intellij.ide.util.MemberChooser" timestamp="1575225409932">
+      <screen x="0" y="0" width="1280" height="984" />
+    </state>
+    <state x="445" y="200" key="#com.intellij.ide.util.MemberChooser/0.0.1280.984@0.0.1280.984" timestamp="1575225409932" />
+    <state width="1237" height="263" key="GridCell.Tab.0.bottom" timestamp="1575226338781">
+      <screen x="0" y="0" width="1280" height="984" />
+    </state>
+    <state width="1237" height="263" key="GridCell.Tab.0.bottom/0.0.1280.984@0.0.1280.984" timestamp="1575226338781" />
+    <state width="1237" height="263" key="GridCell.Tab.0.center" timestamp="1575226338780">
+      <screen x="0" y="0" width="1280" height="984" />
+    </state>
+    <state width="1237" height="263" key="GridCell.Tab.0.center/0.0.1280.984@0.0.1280.984" timestamp="1575226338780" />
+    <state width="1237" height="263" key="GridCell.Tab.0.left" timestamp="1575226338780">
+      <screen x="0" y="0" width="1280" height="984" />
+    </state>
+    <state width="1237" height="263" key="GridCell.Tab.0.left/0.0.1280.984@0.0.1280.984" timestamp="1575226338780" />
+    <state width="1237" height="263" key="GridCell.Tab.0.right" timestamp="1575226338780">
+      <screen x="0" y="0" width="1280" height="984" />
+    </state>
+    <state width="1237" height="263" key="GridCell.Tab.0.right/0.0.1280.984@0.0.1280.984" timestamp="1575226338780" />
+    <state width="1237" height="325" key="GridCell.Tab.1.bottom" timestamp="1575226299221">
+      <screen x="0" y="0" width="1280" height="984" />
+    </state>
+    <state width="1237" height="325" key="GridCell.Tab.1.bottom/0.0.1280.984@0.0.1280.984" timestamp="1575226299221" />
+    <state width="1237" height="325" key="GridCell.Tab.1.center" timestamp="1575226299221">
+      <screen x="0" y="0" width="1280" height="984" />
+    </state>
+    <state width="1237" height="325" key="GridCell.Tab.1.center/0.0.1280.984@0.0.1280.984" timestamp="1575226299221" />
+    <state width="1237" height="325" key="GridCell.Tab.1.left" timestamp="1575226299221">
+      <screen x="0" y="0" width="1280" height="984" />
+    </state>
+    <state width="1237" height="325" key="GridCell.Tab.1.left/0.0.1280.984@0.0.1280.984" timestamp="1575226299221" />
+    <state width="1237" height="325" key="GridCell.Tab.1.right" timestamp="1575226299221">
+      <screen x="0" y="0" width="1280" height="984" />
+    </state>
+    <state width="1237" height="325" key="GridCell.Tab.1.right/0.0.1280.984@0.0.1280.984" timestamp="1575226299221" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/gui/dialog/ExportDialog.java</url>
+          <line>41</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
