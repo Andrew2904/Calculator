@@ -1,6 +1,6 @@
 package gui.dialog;
 
-import gui.list.Count;
+import entity.Count;
 
 import javax.swing.*;
 import javax.swing.filechooser.FileNameExtensionFilter;
@@ -62,13 +62,13 @@ public class ExportDialog {
                 out.writeCharacters(System.getProperty("line.separator"));
 
                 out.writeStartElement("Inchisoare");
-                out.writeCharacters(String.valueOf(data.get(i).getJail()));
+                out.writeCharacters(String.valueOf(data.get(i).getMinJail()));
                 out.writeEndElement();
                 out.writeCharacters(System.getProperty("line.separator"));
 
 
                 out.writeStartElement("Amenda");
-                out.writeCharacters(String.valueOf(data.get(i).getFine()));
+                out.writeCharacters(String.valueOf(data.get(i).getMinFine()));
                 out.writeEndElement();
                 out.writeCharacters(System.getProperty("line.separator"));
 

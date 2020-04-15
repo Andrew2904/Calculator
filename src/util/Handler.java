@@ -1,6 +1,6 @@
 package util;
 
-import gui.list.Count;
+import entity.Count;
 import org.xml.sax.Attributes;
 import org.xml.sax.SAXException;
 import org.xml.sax.helpers.DefaultHandler;
@@ -9,15 +9,17 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Handler extends DefaultHandler {
-    boolean bDesc, bJail, bFine, bLast;
+    boolean bDesc, bMinJail, bMaxJail, bMinFine, bMaxFine, bLast;
     List<Count> list;
     Count current;
     String last;
 
     public Handler(){
         bDesc = false;
-        bJail = false;
-        bFine = false;
+        bMinJail = false;
+        bMaxJail = false;
+        bMinFine = false;
+        bMaxFine = false;
         bLast = false;
         list = new ArrayList<>();
     }
@@ -34,11 +36,17 @@ public class Handler extends DefaultHandler {
             case "denumire":
                 bDesc = true;
                 break;
-            case "inchisoare":
-                bJail = true;
+            case "mininchisoare":
+                bMinJail = true;
                 break;
-            case "amenda":
-                bFine = true;
+            case "maxinchisoare":
+                bMaxJail = true;
+                break;
+            case "minamenda":
+                bMinFine = true;
+                break;
+            case "maxamenda":
+                bMaxFine = true;
                 break;
             case "editare":
                 bLast = true;
@@ -55,11 +63,17 @@ public class Handler extends DefaultHandler {
             case "denumire":
                 bDesc = false;
                 break;
-            case "inchisoare":
-                bJail = false;
+            case "mininchisoare":
+                bMinJail = false;
                 break;
-            case "amenda":
-                bFine = false;
+            case "maxinchisoare":
+                bMaxJail = false;
+                break;
+            case "minamenda":
+                bMinFine = false;
+                break;
+            case "maxamenda":
+                bMaxFine = false;
                 break;
             case "editare":
                 bLast = false;
@@ -72,10 +86,14 @@ public class Handler extends DefaultHandler {
         String value = new String(ch, start, length);
         if(bDesc)
             current.setDesc(value);
-        if(bJail)
-            current.setJail(parseInt(value));
-        if(bFine)
-            current.setFine(parseFloat(value));
+        if(bMinJail)
+            current.setMinJail( parseInt(value) );
+        if(bMaxJail)
+            current.setMaxJail( parseInt(value) );
+        if(bMinFine)
+            current.setMinFine( parseInt(value) );
+        if(bMaxFine)
+            current.setMaxFine( parseInt(value) );
         if(bLast)
             current.setDate(value);
     }

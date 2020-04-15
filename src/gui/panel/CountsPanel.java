@@ -1,32 +1,31 @@
-package gui;
+package gui.panel;
 
 import javax.swing.*;
-import javax.xml.stream.XMLOutputFactory;
-import javax.xml.stream.XMLStreamWriter;
 
-import gui.dialog.AddDialog;
-import gui.list.Count;
+import gui.Calculator;
+import gui.dialog.CountDialog;
+import entity.Count;
 import gui.list.CountRenderer;
-import org.xml.sax.SAXException;
 import util.XMLParser;
 
 import java.awt.*;
 import java.awt.event.*;
-import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 
 //TO DO: Adaugat mesaje de eroare vizibile pentru user
-public class Search extends JPanel implements KeyListener, ActionListener, MouseListener {
+//TO DO: Check events
+public class CountsPanel extends JPanel implements ActionListener, KeyListener, MouseListener{
     List<Count> data;
     JList countList;
     JTextField searchField;
     XMLParser parser;
 
-    public Search(){
+    public CountsPanel(){
         this.setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
         this.setBackground(Color.BLACK);
         searchField = new JTextField();
+
         searchField.addKeyListener(this);
 
         data = new ArrayList<Count>();
@@ -37,6 +36,7 @@ public class Search extends JPanel implements KeyListener, ActionListener, Mouse
         countList.setCellRenderer(new CountRenderer());
         countList.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
         countList.setLayoutOrientation(JList.VERTICAL);
+        countList.addMouseListener(this);
 
         JPanel listPanel = new JPanel();
         JPanel buttonPanel = new JPanel();
@@ -44,11 +44,15 @@ public class Search extends JPanel implements KeyListener, ActionListener, Mouse
         buttonPanel.setLayout(new GridLayout(0, 1, 0, 4));
 
         JButton addButton = new JButton();
-        addButton.setText("Adauga fapta");
+        addButton.setText("Adaugă fapta");
         addButton.addActionListener(this);
 
+        JButton changeButton = new JButton();
+        changeButton.setText("Modifică fapta");
+        changeButton.addActionListener(this);
+
         JButton removeButton = new JButton();
-        removeButton.setText("Sterge fapta");
+        removeButton.setText("Șterge fapta");
         removeButton.addActionListener(this);
 
         JScrollPane countScroller = new JScrollPane(countList);
@@ -56,6 +60,7 @@ public class Search extends JPanel implements KeyListener, ActionListener, Mouse
         listPanel.add(countScroller, BorderLayout.CENTER);
         this.add(listPanel);
         buttonPanel.add(addButton, BorderLayout.SOUTH);
+        buttonPanel.add(changeButton, BorderLayout.SOUTH);
         buttonPanel.add(removeButton, BorderLayout.SOUTH);
         this.add(buttonPanel);
     }
@@ -101,30 +106,72 @@ public class Search extends JPanel implements KeyListener, ActionListener, Mouse
     @Override
     public void actionPerformed(ActionEvent e) {
         JButton source = (JButton) e.getSource();
+        CountDialog ad;
+        int i;
+        Count added;
+
         switch (source.getText()){
-            case "Adauga fapta":
-                AddDialog ad = new AddDialog();
+            case "Adaugă fapta":
+                ad = new CountDialog();
                 ad.showDialog();
-                data.add(ad.getAdded());
-                getData();
+                added = ad.getAdded();
+                if(added != null)
+                    data.add(added);
+
                 break;
-            case "Sterge fapta":
-                data.remove(countList.getSelectedIndex());
-                getData();
+            case "Șterge fapta":
+                i = countList.getSelectedIndex();
+                if(i>=0)
+                    data.remove(countList.getSelectedIndex());
+
+                break;
+            case "Modifică fapta":
+                i = countList.getSelectedIndex();
+                if(i<0)
+                    break;
+
+                ad = new CountDialog(data.get(i));
+                ad.showDialog();
+
+                added = ad.getAdded();
+                if(added != null)
+                    data.set(i, added);
+
                 break;
             default:
                 return;
         }
+
+        getData();
     }
 
     @Override
     public void mouseClicked(MouseEvent e) {
+        JComponent source = (JComponent) e.getSource();
+        System.out.println("Click");
+        do{
+            //System.out.println("Searching... "+source.getClass());
+            source = (JComponent) source.getParent();
+        }while(source!=null && !(source.getParent() instanceof Calculator));
 
+        Calculator parent = (Calculator) source.getParent();
+        parent.mouseClicked(e);
     }
 
     @Override
     public void mousePressed(MouseEvent e) {
+        if(e.getClickCount()!=1)
+            return;
 
+        JComponent source = (JComponent) e.getSource();
+        System.out.println("Hooooooooooooooooold");
+        do{
+            //System.out.println("Searching... "+source.getClass());
+            source = (JComponent) source.getParent();
+        }while(source!=null && !(source.getParent() instanceof Calculator));
+
+        Calculator parent = (Calculator) source.getParent();
+        parent.mouseClicked(e);
     }
 
     @Override

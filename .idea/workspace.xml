@@ -6,14 +6,41 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="52209253-6fa0-4455-a39e-1b177776e360" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="52209253-6fa0-4455-a39e-1b177776e360" name="Default Changelist" comment="Separat panouri">
+      <change afterPath="$PROJECT_DIR$/src/entity/Circumstance.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/entity/CommitedCount.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/entity/Count.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/entity/Sentence.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/gui/list/CircumstanceRenderer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/gui/panel/CircumstancePanel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/gui/panel/CurrentPanel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/gui/panel/SentencePanel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo.xml" beforeDir="false" afterPath="$PROJECT_DIR$/demo.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Calculator/gui/Calculator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Calculator/gui/Calculator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Calculator/gui/FinalSentence.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Calculator/gui/MainSentence.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Calculator/gui/PastSentence.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Calculator/gui/Search.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Calculator/gui/dialog/AddDialog.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Calculator/gui/dialog/ExportDialog.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Calculator/gui/dialog/ExportDialog.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Calculator/gui/list/Count.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Calculator/gui/list/CountRenderer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Calculator/gui/list/CountRenderer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Calculator/util/Handler.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Calculator/util/Handler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Calculator/util/Sentence.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Calculator/util/Sentence.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Calculator/util/XMLParser.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Calculator/util/XMLParser.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/save.xml" beforeDir="false" afterPath="$PROJECT_DIR$/save.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/gui/Calculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/Calculator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/Search.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/Search.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/FinalSentence.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/MainSentence.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/PastSentence.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/Search.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/panel/CountsPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/dialog/AddDialog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/dialog/CountDialog.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/gui/dialog/ExportDialog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/dialog/ExportDialog.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/dialog/ImportDialog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/dialog/ImportDialog.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/list/Count.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/list/CountRenderer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/list/CountRenderer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/util/Handler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/util/Handler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/util/Sentence.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/util/Sentence.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/util/XMLParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/util/XMLParser.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -51,6 +78,9 @@
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="gui.panel" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\Programare\Testing\Calculator\res" />
       <recent name="F:\Programare\Testing\Calculator\res" />
@@ -108,7 +138,34 @@
       <workItem from="1575026707657" duration="14963000" />
       <workItem from="1575110706483" duration="15845000" />
       <workItem from="1575210417481" duration="201000" />
-      <workItem from="1575210946511" duration="7632000" />
+      <workItem from="1575210946511" duration="12863000" />
+      <workItem from="1575283502842" duration="1872000" />
+      <workItem from="1575377901278" duration="6695000" />
+      <workItem from="1575883289081" duration="27000" />
+      <workItem from="1581935478488" duration="4752000" />
+      <workItem from="1582024665626" duration="1038000" />
+      <workItem from="1582036439336" duration="1716000" />
+      <workItem from="1582114784885" duration="7673000" />
+      <workItem from="1582200610542" duration="977000" />
+      <workItem from="1582817140715" duration="651000" />
+      <workItem from="1583065833248" duration="898000" />
+      <workItem from="1583143765520" duration="939000" />
+      <workItem from="1583164298787" duration="71000" />
+      <workItem from="1583164558272" duration="980000" />
+      <workItem from="1583237409047" duration="574000" />
+      <workItem from="1583317659702" duration="44000" />
+      <workItem from="1584191342875" duration="463000" />
+      <workItem from="1584463486271" duration="218000" />
+      <workItem from="1584527901112" duration="6513000" />
+      <workItem from="1584620367530" duration="5847000" />
+      <workItem from="1585215758420" duration="1410000" />
+      <workItem from="1585314379882" duration="10000" />
+      <workItem from="1585561951897" duration="1087000" />
+      <workItem from="1585587213181" duration="1198000" />
+      <workItem from="1585662678813" duration="594000" />
+      <workItem from="1586611176803" duration="598000" />
+      <workItem from="1586773002032" duration="596000" />
+      <workItem from="1586871633344" duration="6420000" />
     </task>
     <servers />
   </component>
@@ -128,55 +185,63 @@
       </map>
     </option>
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Separat panouri" />
+    <option name="LAST_COMMIT_MESSAGE" value="Separat panouri" />
+  </component>
   <component name="WindowStateProjectService">
-    <state x="94" y="146" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1575216453081">
+    <state x="164" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1584628206973">
       <screen x="0" y="0" width="1280" height="984" />
     </state>
-    <state x="94" y="146" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.984@0.0.1280.984" timestamp="1575216453081" />
-    <state x="445" y="200" key="#com.intellij.ide.util.MemberChooser" timestamp="1575225409932">
+    <state x="164" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1280.984@0.0.1280.984" timestamp="1584628206973" />
+    <state x="265" y="186" key="CommitChangelistDialog2" timestamp="1584629552259">
       <screen x="0" y="0" width="1280" height="984" />
     </state>
-    <state x="445" y="200" key="#com.intellij.ide.util.MemberChooser/0.0.1280.984@0.0.1280.984" timestamp="1575225409932" />
-    <state width="1237" height="263" key="GridCell.Tab.0.bottom" timestamp="1575226338781">
+    <state x="265" y="186" key="CommitChangelistDialog2/0.0.1280.984@0.0.1280.984" timestamp="1584629552259" />
+    <state width="1237" height="325" key="GridCell.Tab.0.bottom" timestamp="1586890845638">
       <screen x="0" y="0" width="1280" height="984" />
     </state>
-    <state width="1237" height="263" key="GridCell.Tab.0.bottom/0.0.1280.984@0.0.1280.984" timestamp="1575226338781" />
-    <state width="1237" height="263" key="GridCell.Tab.0.center" timestamp="1575226338780">
+    <state width="1237" height="325" key="GridCell.Tab.0.bottom/0.0.1280.984@0.0.1280.984" timestamp="1586890845638" />
+    <state width="1237" height="325" key="GridCell.Tab.0.center" timestamp="1586890845638">
       <screen x="0" y="0" width="1280" height="984" />
     </state>
-    <state width="1237" height="263" key="GridCell.Tab.0.center/0.0.1280.984@0.0.1280.984" timestamp="1575226338780" />
-    <state width="1237" height="263" key="GridCell.Tab.0.left" timestamp="1575226338780">
+    <state width="1237" height="325" key="GridCell.Tab.0.center/0.0.1280.984@0.0.1280.984" timestamp="1586890845638" />
+    <state width="1237" height="325" key="GridCell.Tab.0.left" timestamp="1586890845638">
       <screen x="0" y="0" width="1280" height="984" />
     </state>
-    <state width="1237" height="263" key="GridCell.Tab.0.left/0.0.1280.984@0.0.1280.984" timestamp="1575226338780" />
-    <state width="1237" height="263" key="GridCell.Tab.0.right" timestamp="1575226338780">
+    <state width="1237" height="325" key="GridCell.Tab.0.left/0.0.1280.984@0.0.1280.984" timestamp="1586890845638" />
+    <state width="1237" height="325" key="GridCell.Tab.0.right" timestamp="1586890845638">
       <screen x="0" y="0" width="1280" height="984" />
     </state>
-    <state width="1237" height="263" key="GridCell.Tab.0.right/0.0.1280.984@0.0.1280.984" timestamp="1575226338780" />
-    <state width="1237" height="325" key="GridCell.Tab.1.bottom" timestamp="1575226299221">
+    <state width="1237" height="325" key="GridCell.Tab.0.right/0.0.1280.984@0.0.1280.984" timestamp="1586890845638" />
+    <state width="1237" height="325" key="GridCell.Tab.1.bottom" timestamp="1586890845638">
       <screen x="0" y="0" width="1280" height="984" />
     </state>
-    <state width="1237" height="325" key="GridCell.Tab.1.bottom/0.0.1280.984@0.0.1280.984" timestamp="1575226299221" />
-    <state width="1237" height="325" key="GridCell.Tab.1.center" timestamp="1575226299221">
+    <state width="1237" height="325" key="GridCell.Tab.1.bottom/0.0.1280.984@0.0.1280.984" timestamp="1586890845638" />
+    <state width="1237" height="325" key="GridCell.Tab.1.center" timestamp="1586890845638">
       <screen x="0" y="0" width="1280" height="984" />
     </state>
-    <state width="1237" height="325" key="GridCell.Tab.1.center/0.0.1280.984@0.0.1280.984" timestamp="1575226299221" />
-    <state width="1237" height="325" key="GridCell.Tab.1.left" timestamp="1575226299221">
+    <state width="1237" height="325" key="GridCell.Tab.1.center/0.0.1280.984@0.0.1280.984" timestamp="1586890845638" />
+    <state width="1237" height="325" key="GridCell.Tab.1.left" timestamp="1586890845638">
       <screen x="0" y="0" width="1280" height="984" />
     </state>
-    <state width="1237" height="325" key="GridCell.Tab.1.left/0.0.1280.984@0.0.1280.984" timestamp="1575226299221" />
-    <state width="1237" height="325" key="GridCell.Tab.1.right" timestamp="1575226299221">
+    <state width="1237" height="325" key="GridCell.Tab.1.left/0.0.1280.984@0.0.1280.984" timestamp="1586890845638" />
+    <state width="1237" height="325" key="GridCell.Tab.1.right" timestamp="1586890845638">
       <screen x="0" y="0" width="1280" height="984" />
     </state>
-    <state width="1237" height="325" key="GridCell.Tab.1.right/0.0.1280.984@0.0.1280.984" timestamp="1575226299221" />
+    <state width="1237" height="325" key="GridCell.Tab.1.right/0.0.1280.984@0.0.1280.984" timestamp="1586890845638" />
+    <state x="449" y="408" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1584629525710">
+      <screen x="0" y="0" width="1280" height="984" />
+    </state>
+    <state x="449" y="408" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1280.984@0.0.1280.984" timestamp="1584629525710" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/gui/dialog/ExportDialog.java</url>
-          <line>41</line>
-          <option name="timeStamp" value="7" />
+          <url>file://$PROJECT_DIR$/src/gui/dialog/CountDialog.java</url>
+          <line>111</line>
+          <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

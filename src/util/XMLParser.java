@@ -1,6 +1,6 @@
 package util;
 
-import gui.list.Count;
+import entity.Count;
 import javax.xml.parsers.SAXParser;
 import javax.xml.parsers.SAXParserFactory;
 import java.io.File;

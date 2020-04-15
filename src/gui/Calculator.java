@@ -2,33 +2,36 @@ package gui;
 
 import gui.dialog.ExportDialog;
 import gui.dialog.ImportDialog;
+import gui.panel.CountsPanel;
 
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
 
 //TO DO: deschis fisier recent la initializare
 //TO DO: creat fisier la inchiderea programului
 //TO DO: completat fereastra pentru user
-//TO DO: instantiat lista de fapte+import
-public class Calculator extends JFrame implements ActionListener {
-    Search searchPanel;
+public class Calculator extends JFrame implements ActionListener, MouseListener {
+    CountsPanel searchPanel;
     JPanel setupPanel, jailPanel, finePanel;
 
     public Calculator(){
         JPanel content = (JPanel) this.getContentPane();
-        content.setLayout( new BoxLayout(content, BoxLayout.Y_AXIS) );
+        content.setLayout( new BoxLayout(content, BoxLayout.X_AXIS) );
 
         setupPanel = new JPanel();
         setupPanel.setLayout( new BoxLayout(setupPanel, BoxLayout.X_AXIS) );
-        searchPanel = new Search();
+        searchPanel = new CountsPanel();
         searchPanel.readDate("demo.xml");
+        searchPanel.addMouseListener(this);
 
         setupPanel.add(searchPanel);
         content.add(setupPanel);
 
-        JPanel sentencePanel, mainPanel, pastPanel, finalPanel;
+        JPanel sentencePanel, mainPanel;
         sentencePanel = new JPanel();
         sentencePanel.setLayout( new BoxLayout(sentencePanel, BoxLayout.Y_AXIS) );
 
@@ -62,12 +65,21 @@ public class Calculator extends JFrame implements ActionListener {
         mb.add(fileItem);
         dataItem = new JMenu("Lista");
         mb.add(dataItem);
-        importItem = new JMenuItem("Import...");
+        importItem = new JMenuItem("Import fapte...");
         importItem.addActionListener(this);
         dataItem.add(importItem);
-        exportItem = new JMenuItem("Export...");
+        exportItem = new JMenuItem("Export fapte...");
         exportItem.addActionListener(this);
         dataItem.add(exportItem);
+
+        dataItem.addSeparator();
+        importItem = new JMenuItem("Import circumstanțe...");
+        importItem.addActionListener(this);
+        dataItem.add(importItem);
+        exportItem = new JMenuItem("Export circumstanțe...");
+        exportItem.addActionListener(this);
+        dataItem.add(exportItem);
+
         helpItem = new JMenuItem("Ajutor");
         helpItem.addActionListener(this);
         mb.add(helpItem);
@@ -86,13 +98,13 @@ public class Calculator extends JFrame implements ActionListener {
             if(text.equals("Iesire"))
                 System.exit(0);
             else
-            if(text.equals("Import...")){
+            if(text.equals("Import fapte...")){
                 ImportDialog id = new ImportDialog();
                 id.showDialog(this, "Alegere fisier");
                 searchPanel.readDate(id.getFile());
             }
             else
-            if(text.equals("Export...")){
+            if(text.equals("Export fapte...")){
                 ExportDialog ed = new ExportDialog();
                 //ed.showDialog(this, "Export fisier");
                 ed.export(searchPanel.getList());
@@ -102,5 +114,30 @@ public class Calculator extends JFrame implements ActionListener {
         }catch (Exception ex){
             System.err.println(ex.getMessage());
         }
+    }
+
+    @Override
+    public void mouseClicked(MouseEvent e) {
+        System.out.println(e.getSource().getClass());
+    }
+
+    @Override
+    public void mousePressed(MouseEvent e) {
+
+    }
+
+    @Override
+    public void mouseReleased(MouseEvent e) {
+
+    }
+
+    @Override
+    public void mouseEntered(MouseEvent e) {
+
+    }
+
+    @Override
+    public void mouseExited(MouseEvent e) {
+
     }
 }

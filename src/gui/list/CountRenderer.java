@@ -1,5 +1,6 @@
 package gui.list;
 
+import entity.Count;
 import util.ResourceManager;
 
 import javax.swing.*;
@@ -9,6 +10,7 @@ import java.awt.*;
 
 public class CountRenderer extends JPanel implements ListCellRenderer<Count> {
     int w = 25, h = 25, t = 5;
+    int width = 40;
 
     @Override
     public Component getListCellRendererComponent(JList<? extends Count> list, Count value, int index, boolean isSelected, boolean cellHasFocus) {
@@ -30,10 +32,16 @@ public class CountRenderer extends JPanel implements ListCellRenderer<Count> {
         fineLabel = new JLabel();
         lastLabel = new JLabel();
 
-        if(value.desc.length()>20)
-            descLabel.setText(value.desc.substring(0, 20)+"...");
-        else
-            descLabel.setText(value.desc);
+        String descText = "<html>";
+        int i;
+        for(i=0;i<value.getDesc().length()/width-1;i++){
+            descText += value.getDesc().substring(width*i, width*(i+1));
+            descText += "<br>";
+        }
+        descText += value.getDesc().substring(width*i, value.getDesc().length());
+        descText += "<br>";
+        descText += "</html>";
+        descLabel.setText(descText);
 
         String fineText, jailText;
         fineText = "";
@@ -57,9 +65,9 @@ public class CountRenderer extends JPanel implements ListCellRenderer<Count> {
             fineText = "Amenda: ";
         }
 
-        jailLabel.setText(jailText+value.jail);
-        fineLabel.setText(fineText+value.fine);
-        lastLabel.setText(value.date.toString());
+        jailLabel.setText(jailText+value.getMinJail()+" - "+value.getMaxJail());
+        fineLabel.setText(fineText+value.getMinFine()+" - "+value.getMaxFine());
+        lastLabel.setText(value.getDate().toString());
 
         add(descLabel);
         add(jailLabel);

@@ -1,6 +1,6 @@
 package gui.dialog;
 
-import gui.list.Count;
+import entity.Count;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
@@ -8,12 +8,13 @@ import java.awt.event.ActionListener;
 import java.util.Date;
 
 //TO DO: Tratat valori gresite vizibil pentru user
-public class AddDialog extends JDialog implements ActionListener{
+public class CountDialog extends JDialog implements ActionListener{
     private Count added;
     private boolean accessible;
-    private JTextField descField, jailField, fineField, dateField;
+    private JTextField descField, minJailField, maxJailField, minFineField, maxFineField;
+    private JButton addButton;
 
-    public AddDialog(){
+    public CountDialog(Count current){
         super();
         this.setLocationRelativeTo(null);
         this.setTitle("Adaugare fapta");
@@ -28,21 +29,32 @@ public class AddDialog extends JDialog implements ActionListener{
         descPanel.setLayout(new BoxLayout(descPanel, BoxLayout.X_AXIS));
         descPanel.add(new JLabel("Descrierea faptei:"));
         descField = new JTextField();
+        descField.setText( current.getDesc() );
         descPanel.add(descField);
         this.add(descPanel);
 
         jailPanel = new JPanel();
         jailPanel.setLayout(new BoxLayout(jailPanel, BoxLayout.X_AXIS));
         jailPanel.add(new JLabel("Pedeapsa cu inchisoare(zile):"));
-        jailField = new JTextField();
-        jailPanel.add(jailField);
+        minJailField = new JTextField();
+        minJailField.setText(String.valueOf( current.getMinJail() ));
+        jailPanel.add(minJailField);
+        jailPanel.add(new JLabel("-"));
+        maxJailField = new JTextField();
+        maxJailField.setText(String.valueOf( current.getMaxJail() ));
+        jailPanel.add(maxJailField);
         this.add(jailPanel);
 
         finePanel = new JPanel();
         finePanel.setLayout(new BoxLayout(finePanel, BoxLayout.X_AXIS));
         finePanel.add(new JLabel("Pedeapsa cu amenda:"));
-        fineField = new JTextField();
-        finePanel.add(fineField);
+        minFineField = new JTextField();
+        minFineField.setText(String.valueOf( current.getMinFine() ));
+        finePanel.add(minFineField);
+        finePanel.add(new JLabel("-"));
+        maxFineField = new JTextField();
+        maxFineField.setText(String.valueOf( current.getMaxFine() ));
+        finePanel.add(maxFineField);
         this.add(finePanel);
 
         datePanel = new JPanel();
@@ -52,8 +64,8 @@ public class AddDialog extends JDialog implements ActionListener{
 
         submitPanel = new JPanel();
         submitPanel.setLayout(new BoxLayout(submitPanel, BoxLayout.X_AXIS));
-        JButton addButton, cancelButton;
-        addButton = new JButton("Adauga");
+        JButton cancelButton;
+        addButton = new JButton("Modifică");
         addButton.setName("add");
         addButton.addActionListener(this);
         cancelButton = new JButton("Anuleaza");
@@ -70,6 +82,12 @@ public class AddDialog extends JDialog implements ActionListener{
         this.pack();
     }
 
+    public CountDialog(){
+        this(new Count());
+
+        addButton.setText("Adaugă");
+    }
+
     public void showDialog(){
         this.setVisible(true);
     }
@@ -80,18 +98,22 @@ public class AddDialog extends JDialog implements ActionListener{
         //System.out.println( "Description: "+ descField.getText() );
         added.setDesc( descField.getText() );
         try{
-            int jail = Integer.parseInt(jailField.getText());
+            int jail = Integer.parseInt(minJailField.getText());
             //System.out.println( "Jail(days): "+jail );
-            added.setJail( jail );
+            added.setMinJail( jail );
+            jail = Integer.parseInt(maxJailField.getText());
+            added.setMaxJail( jail );
         }catch (Exception ex){
             accessible = false;
             System.err.println( "Jail(days): "+"WRONG" );
         }
 
         try{
-            float fine = Float.parseFloat(fineField.getText());
+            int fine = Integer.parseInt(minFineField.getText());
             //System.out.println( "Fine(RON): "+fine );
-            added.setFine( fine );
+            added.setMinFine( fine );
+            fine = Integer.parseInt(maxFineField.getText());
+            added.setMaxFine( fine );
         }catch (Exception ex){
             accessible = false;
             System.err.println( "Fine(RON): "+"WRONG" );
