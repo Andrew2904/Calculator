@@ -3,6 +3,7 @@ package gui.dialog;
 import entity.Count;
 
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.text.SimpleDateFormat;
@@ -14,17 +15,24 @@ public class CountDialog extends JDialog implements ActionListener{
     private boolean accessible;
     private JTextField descField, minJailField, maxJailField, minFineField, maxFineField, dateField;
     private JButton addButton;
+    private JLabel errLabel;
 
     public CountDialog(Count current){
         super();
         this.setLocationRelativeTo(null);
-        this.setTitle("Adaugare fapta");
+        this.setTitle("Modificare faptă");
         this.setModal(true);
+
+        errLabel = new JLabel();
+        errLabel.setBackground(Color.red);
+        errLabel.setOpaque(true);
 
         JPanel content = (JPanel) this.getContentPane();
         content.setLayout(new BoxLayout(content, BoxLayout.Y_AXIS));
 
         JPanel descPanel, jailPanel, finePanel, datePanel, submitPanel;
+
+        content.add(errLabel);
 
         descPanel = new JPanel();
         descPanel.setLayout(new BoxLayout(descPanel, BoxLayout.X_AXIS));
@@ -60,7 +68,7 @@ public class CountDialog extends JDialog implements ActionListener{
 
         datePanel = new JPanel();
         datePanel.setLayout(new BoxLayout(datePanel, BoxLayout.X_AXIS));
-        datePanel.add(new JLabel("Data de aplicare:"));
+        datePanel.add(new JLabel("Data de aplicare(zi-luna-an):"));
         dateField = new JTextField();
         dateField.setText(String.valueOf( current.getDate() ));
         datePanel.add(dateField);
@@ -90,6 +98,7 @@ public class CountDialog extends JDialog implements ActionListener{
         this(new Count());
 
         addButton.setText("Adaugă");
+        this.setTitle("Adăugare faptă");
     }
 
     public void showDialog(){
@@ -109,7 +118,7 @@ public class CountDialog extends JDialog implements ActionListener{
             added.setMaxJail( jail );
         }catch (Exception ex){
             accessible = false;
-            System.err.println( "Jail(days): "+"WRONG" );
+            error( "Pedeapsa cu închisoarea incorectă", ex);
         }
 
         try{
@@ -120,7 +129,7 @@ public class CountDialog extends JDialog implements ActionListener{
             added.setMaxFine( fine );
         }catch (Exception ex){
             accessible = false;
-            System.err.println( "Fine(RON): "+"WRONG" );
+            error( "Pedeapsa cu amendă incorectă", ex);
         }
 
         try{
@@ -128,7 +137,7 @@ public class CountDialog extends JDialog implements ActionListener{
             added.setDate(date);
         }catch (Exception ex){
             accessible = false;
-            System.err.println( "Data: "+"WRONG" );
+            error( "Data incorectă", ex);
         }
 
         return accessible;
@@ -152,5 +161,13 @@ public class CountDialog extends JDialog implements ActionListener{
             accessible = false;
 
         this.dispose();
+    }
+
+    private void error(String message, Exception ex){
+        System.err.println("Message: "+message);
+        System.err.println("Caused by: "+ex.getMessage());
+
+        errLabel.setText(message);
+        this.pack();
     }
 }
