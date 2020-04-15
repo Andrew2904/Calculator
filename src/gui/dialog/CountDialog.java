@@ -10,6 +10,7 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+//TO DO: Centrat mesaj de eroare
 public class CountDialog extends JDialog implements ActionListener{
     private Count added;
     private boolean accessible;
@@ -30,9 +31,12 @@ public class CountDialog extends JDialog implements ActionListener{
         JPanel content = (JPanel) this.getContentPane();
         content.setLayout(new BoxLayout(content, BoxLayout.Y_AXIS));
 
-        JPanel descPanel, jailPanel, finePanel, datePanel, submitPanel;
+        JPanel errPanel, descPanel, jailPanel, finePanel, datePanel, submitPanel;
 
-        content.add(errLabel);
+        errPanel = new JPanel();
+        errPanel.setLayout(new BorderLayout());
+        errPanel.add(errLabel, BorderLayout.CENTER);
+        this.add(errPanel);
 
         descPanel = new JPanel();
         descPanel.setLayout(new BoxLayout(descPanel, BoxLayout.X_AXIS));
@@ -108,11 +112,9 @@ public class CountDialog extends JDialog implements ActionListener{
     private boolean validateInput(){
         accessible = true;
 
-        //System.out.println( "Description: "+ descField.getText() );
         added.setDesc( descField.getText() );
         try{
             int jail = Integer.parseInt(minJailField.getText());
-            //System.out.println( "Jail(days): "+jail );
             added.setMinJail( jail );
             jail = Integer.parseInt(maxJailField.getText());
             added.setMaxJail( jail );
@@ -123,7 +125,6 @@ public class CountDialog extends JDialog implements ActionListener{
 
         try{
             int fine = Integer.parseInt(minFineField.getText());
-            //System.out.println( "Fine(RON): "+fine );
             added.setMinFine( fine );
             fine = Integer.parseInt(maxFineField.getText());
             added.setMaxFine( fine );
