@@ -7,41 +7,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="52209253-6fa0-4455-a39e-1b177776e360" name="Default Changelist" comment="Separat panouri">
-      <change afterPath="$PROJECT_DIR$/src/entity/Circumstance.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/entity/CommitedCount.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/entity/Count.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/entity/Sentence.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/gui/list/CircumstanceRenderer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/gui/panel/CircumstancePanel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/gui/panel/CurrentPanel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/gui/panel/SentencePanel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo.xml" beforeDir="false" afterPath="$PROJECT_DIR$/demo.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Calculator/gui/Calculator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Calculator/gui/Calculator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Calculator/gui/FinalSentence.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Calculator/gui/MainSentence.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Calculator/gui/PastSentence.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Calculator/gui/Search.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Calculator/gui/dialog/AddDialog.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Calculator/gui/dialog/ExportDialog.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Calculator/gui/dialog/ExportDialog.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Calculator/gui/list/Count.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Calculator/gui/list/CountRenderer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Calculator/gui/list/CountRenderer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Calculator/util/Handler.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Calculator/util/Handler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Calculator/util/Sentence.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Calculator/util/Sentence.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Calculator/util/XMLParser.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Calculator/util/XMLParser.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/save.xml" beforeDir="false" afterPath="$PROJECT_DIR$/save.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/Calculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/Calculator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/FinalSentence.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/MainSentence.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/PastSentence.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/Search.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/panel/CountsPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/dialog/AddDialog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/dialog/CountDialog.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/dialog/ExportDialog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/dialog/ExportDialog.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/list/Count.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/list/CountRenderer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/list/CountRenderer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/util/Handler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/util/Handler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/util/Sentence.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/util/Sentence.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/util/XMLParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/util/XMLParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/dialog/CountDialog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/dialog/CountDialog.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -166,6 +133,7 @@
       <workItem from="1586611176803" duration="598000" />
       <workItem from="1586773002032" duration="596000" />
       <workItem from="1586871633344" duration="6420000" />
+      <workItem from="1586941902479" duration="2552000" />
     </task>
     <servers />
   </component>
@@ -198,22 +166,22 @@
       <screen x="0" y="0" width="1280" height="984" />
     </state>
     <state x="265" y="186" key="CommitChangelistDialog2/0.0.1280.984@0.0.1280.984" timestamp="1584629552259" />
-    <state width="1237" height="325" key="GridCell.Tab.0.bottom" timestamp="1586890845638">
+    <state width="1237" height="263" key="GridCell.Tab.0.bottom" timestamp="1586950764844">
       <screen x="0" y="0" width="1280" height="984" />
     </state>
-    <state width="1237" height="325" key="GridCell.Tab.0.bottom/0.0.1280.984@0.0.1280.984" timestamp="1586890845638" />
-    <state width="1237" height="325" key="GridCell.Tab.0.center" timestamp="1586890845638">
+    <state width="1237" height="263" key="GridCell.Tab.0.bottom/0.0.1280.984@0.0.1280.984" timestamp="1586950764844" />
+    <state width="1237" height="263" key="GridCell.Tab.0.center" timestamp="1586950764843">
       <screen x="0" y="0" width="1280" height="984" />
     </state>
-    <state width="1237" height="325" key="GridCell.Tab.0.center/0.0.1280.984@0.0.1280.984" timestamp="1586890845638" />
-    <state width="1237" height="325" key="GridCell.Tab.0.left" timestamp="1586890845638">
+    <state width="1237" height="263" key="GridCell.Tab.0.center/0.0.1280.984@0.0.1280.984" timestamp="1586950764843" />
+    <state width="1237" height="263" key="GridCell.Tab.0.left" timestamp="1586950764843">
       <screen x="0" y="0" width="1280" height="984" />
     </state>
-    <state width="1237" height="325" key="GridCell.Tab.0.left/0.0.1280.984@0.0.1280.984" timestamp="1586890845638" />
-    <state width="1237" height="325" key="GridCell.Tab.0.right" timestamp="1586890845638">
+    <state width="1237" height="263" key="GridCell.Tab.0.left/0.0.1280.984@0.0.1280.984" timestamp="1586950764843" />
+    <state width="1237" height="263" key="GridCell.Tab.0.right" timestamp="1586950764843">
       <screen x="0" y="0" width="1280" height="984" />
     </state>
-    <state width="1237" height="325" key="GridCell.Tab.0.right/0.0.1280.984@0.0.1280.984" timestamp="1586890845638" />
+    <state width="1237" height="263" key="GridCell.Tab.0.right/0.0.1280.984@0.0.1280.984" timestamp="1586950764843" />
     <state width="1237" height="325" key="GridCell.Tab.1.bottom" timestamp="1586890845638">
       <screen x="0" y="0" width="1280" height="984" />
     </state>
@@ -240,8 +208,8 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/gui/dialog/CountDialog.java</url>
-          <line>111</line>
-          <option name="timeStamp" value="1" />
+          <line>126</line>
+          <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

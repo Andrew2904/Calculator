@@ -5,13 +5,14 @@ import entity.Count;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 //TO DO: Tratat valori gresite vizibil pentru user
 public class CountDialog extends JDialog implements ActionListener{
     private Count added;
     private boolean accessible;
-    private JTextField descField, minJailField, maxJailField, minFineField, maxFineField;
+    private JTextField descField, minJailField, maxJailField, minFineField, maxFineField, dateField;
     private JButton addButton;
 
     public CountDialog(Count current){
@@ -59,7 +60,10 @@ public class CountDialog extends JDialog implements ActionListener{
 
         datePanel = new JPanel();
         datePanel.setLayout(new BoxLayout(datePanel, BoxLayout.X_AXIS));
-        datePanel.add(new JLabel("Data de aplicare(optional):"));
+        datePanel.add(new JLabel("Data de aplicare:"));
+        dateField = new JTextField();
+        dateField.setText(String.valueOf( current.getDate() ));
+        datePanel.add(dateField);
         this.add(datePanel);
 
         submitPanel = new JPanel();
@@ -119,7 +123,13 @@ public class CountDialog extends JDialog implements ActionListener{
             System.err.println( "Fine(RON): "+"WRONG" );
         }
 
-        added.setDate(new Date());
+        try{
+            Date date = new SimpleDateFormat("dd-MM-yyyy").parse( dateField.getText() );
+            added.setDate(date);
+        }catch (Exception ex){
+            accessible = false;
+            System.err.println( "Data: "+"WRONG" );
+        }
 
         return accessible;
     }
