@@ -134,7 +134,7 @@
       <workItem from="1586611176803" duration="598000" />
       <workItem from="1586773002032" duration="596000" />
       <workItem from="1586871633344" duration="6420000" />
-      <workItem from="1586941902479" duration="7128000" />
+      <workItem from="1586941902479" duration="9948000" />
     </task>
     <task id="LOCAL-00001" summary="Dialog acceptabil pentru fapte">
       <created>1586950851288</created>
@@ -143,7 +143,14 @@
       <option name="project" value="LOCAL" />
       <updated>1586950851288</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Dialog acceptabil pentru fapte #2. Adăugat mesaj de eroare">
+      <created>1586966899487</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1586966899487</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -165,33 +172,34 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Separat panouri" />
     <MESSAGE value="Dialog acceptabil pentru fapte" />
-    <option name="LAST_COMMIT_MESSAGE" value="Dialog acceptabil pentru fapte" />
+    <MESSAGE value="Dialog acceptabil pentru fapte #2. Adăugat mesaj de eroare" />
+    <option name="LAST_COMMIT_MESSAGE" value="Dialog acceptabil pentru fapte #2. Adăugat mesaj de eroare" />
   </component>
   <component name="WindowStateProjectService">
     <state x="164" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1584628206973">
       <screen x="0" y="0" width="1280" height="984" />
     </state>
     <state x="164" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1280.984@0.0.1280.984" timestamp="1584628206973" />
-    <state x="265" y="186" key="CommitChangelistDialog2" timestamp="1586950850323">
+    <state x="265" y="186" key="CommitChangelistDialog2" timestamp="1586966898303">
       <screen x="0" y="0" width="1280" height="984" />
     </state>
-    <state x="265" y="186" key="CommitChangelistDialog2/0.0.1280.984@0.0.1280.984" timestamp="1586950850323" />
-    <state width="1237" height="263" key="GridCell.Tab.0.bottom" timestamp="1586966805408">
+    <state x="265" y="186" key="CommitChangelistDialog2/0.0.1280.984@0.0.1280.984" timestamp="1586966898303" />
+    <state width="1237" height="263" key="GridCell.Tab.0.bottom" timestamp="1586977366699">
       <screen x="0" y="0" width="1280" height="984" />
     </state>
-    <state width="1237" height="263" key="GridCell.Tab.0.bottom/0.0.1280.984@0.0.1280.984" timestamp="1586966805408" />
-    <state width="1237" height="263" key="GridCell.Tab.0.center" timestamp="1586966805408">
+    <state width="1237" height="263" key="GridCell.Tab.0.bottom/0.0.1280.984@0.0.1280.984" timestamp="1586977366699" />
+    <state width="1237" height="263" key="GridCell.Tab.0.center" timestamp="1586977366699">
       <screen x="0" y="0" width="1280" height="984" />
     </state>
-    <state width="1237" height="263" key="GridCell.Tab.0.center/0.0.1280.984@0.0.1280.984" timestamp="1586966805408" />
-    <state width="1237" height="263" key="GridCell.Tab.0.left" timestamp="1586966805408">
+    <state width="1237" height="263" key="GridCell.Tab.0.center/0.0.1280.984@0.0.1280.984" timestamp="1586977366699" />
+    <state width="1237" height="263" key="GridCell.Tab.0.left" timestamp="1586977366699">
       <screen x="0" y="0" width="1280" height="984" />
     </state>
-    <state width="1237" height="263" key="GridCell.Tab.0.left/0.0.1280.984@0.0.1280.984" timestamp="1586966805408" />
-    <state width="1237" height="263" key="GridCell.Tab.0.right" timestamp="1586966805408">
+    <state width="1237" height="263" key="GridCell.Tab.0.left/0.0.1280.984@0.0.1280.984" timestamp="1586977366699" />
+    <state width="1237" height="263" key="GridCell.Tab.0.right" timestamp="1586977366699">
       <screen x="0" y="0" width="1280" height="984" />
     </state>
-    <state width="1237" height="263" key="GridCell.Tab.0.right/0.0.1280.984@0.0.1280.984" timestamp="1586966805408" />
+    <state width="1237" height="263" key="GridCell.Tab.0.right/0.0.1280.984@0.0.1280.984" timestamp="1586977366699" />
     <state width="1237" height="325" key="GridCell.Tab.1.bottom" timestamp="1586966557200">
       <screen x="0" y="0" width="1280" height="984" />
     </state>

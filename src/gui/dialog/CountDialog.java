@@ -6,10 +6,10 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-//TO DO: Tratat valori gresite vizibil pentru user
 public class CountDialog extends JDialog implements ActionListener{
     private Count added;
     private boolean accessible;
@@ -133,7 +133,9 @@ public class CountDialog extends JDialog implements ActionListener{
         }
 
         try{
-            Date date = new SimpleDateFormat("dd-MM-yyyy").parse( dateField.getText() );
+            DateFormat df = new SimpleDateFormat("dd-MM-yyyy");
+            df.setLenient(false);
+            Date date = df.parse( dateField.getText() );
             added.setDate(date);
         }catch (Exception ex){
             accessible = false;
