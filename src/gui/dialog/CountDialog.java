@@ -10,7 +10,6 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-//TO DO: Centrat mesaj de eroare
 public class CountDialog extends JDialog implements ActionListener{
     private Count added;
     private boolean accessible;
@@ -24,62 +23,91 @@ public class CountDialog extends JDialog implements ActionListener{
         this.setTitle("Modificare faptă");
         this.setModal(true);
 
+        JPanel content = (JPanel) this.getContentPane();
+        JPanel dataPanel, submitPanel;
+        content.setLayout(new BorderLayout());
+
         errLabel = new JLabel();
         errLabel.setBackground(Color.red);
         errLabel.setOpaque(true);
+        content.add(errLabel, BorderLayout.NORTH);
 
-        JPanel content = (JPanel) this.getContentPane();
-        content.setLayout(new BoxLayout(content, BoxLayout.Y_AXIS));
+        dataPanel = new JPanel();
+        dataPanel.setLayout(new GridBagLayout());
+        GridBagConstraints gbc = new GridBagConstraints();
+        gbc.ipady = 10;
+        gbc.ipadx = 10;
+        gbc.fill = GridBagConstraints.BOTH;
+        gbc.anchor = GridBagConstraints.CENTER;
 
-        JPanel errPanel, descPanel, jailPanel, finePanel, datePanel, submitPanel;
-
-        errPanel = new JPanel();
-        errPanel.setLayout(new BorderLayout());
-        errPanel.add(errLabel, BorderLayout.CENTER);
-        this.add(errPanel);
-
-        descPanel = new JPanel();
-        descPanel.setLayout(new BoxLayout(descPanel, BoxLayout.X_AXIS));
-        descPanel.add(new JLabel("Descrierea faptei:"));
+        gbc.gridx = 0;
+        gbc.gridy = 1;
+        gbc.gridwidth = 2;
+        dataPanel.add(new JLabel("Descrierea faptei:"), gbc);
         descField = new JTextField();
         descField.setText( current.getDesc() );
-        descPanel.add(descField);
-        this.add(descPanel);
+        gbc.gridx = 2;
+        gbc.gridwidth = 7;
+        dataPanel.add(descField, gbc);
 
-        jailPanel = new JPanel();
-        jailPanel.setLayout(new BoxLayout(jailPanel, BoxLayout.X_AXIS));
-        jailPanel.add(new JLabel("Pedeapsa cu inchisoare(zile):"));
+        gbc.gridx = 0;
+        gbc.gridy = 2;
+        gbc.gridwidth = 2;
+        dataPanel.add(new JLabel("Pedeapsa cu inchisoare(zile):"), gbc);
         minJailField = new JTextField();
         minJailField.setText(String.valueOf( current.getMinJail() ));
-        jailPanel.add(minJailField);
-        jailPanel.add(new JLabel("-"));
+        gbc.gridx = 2;
+        gbc.gridwidth = 3;
+        gbc.weightx = 3.0;
+        dataPanel.add(minJailField, gbc);
+        gbc.gridx = 5;
+        gbc.gridwidth = 1;
+        gbc.weightx = 0.1;
+        gbc.fill = 0;
+        dataPanel.add(new JLabel("-"), gbc);
         maxJailField = new JTextField();
         maxJailField.setText(String.valueOf( current.getMaxJail() ));
-        jailPanel.add(maxJailField);
-        this.add(jailPanel);
+        gbc.gridx = 6;
+        gbc.gridwidth = 3;
+        gbc.weightx = 3.0;
+        gbc.fill = GridBagConstraints.BOTH;
+        dataPanel.add(maxJailField, gbc);
 
-        finePanel = new JPanel();
-        finePanel.setLayout(new BoxLayout(finePanel, BoxLayout.X_AXIS));
-        finePanel.add(new JLabel("Pedeapsa cu amenda:"));
+        gbc.gridx = 0;
+        gbc.gridy = 3;
+        gbc.gridwidth = 2;
+        dataPanel.add(new JLabel("Pedeapsa cu amenda:"), gbc);
         minFineField = new JTextField();
         minFineField.setText(String.valueOf( current.getMinFine() ));
-        finePanel.add(minFineField);
-        finePanel.add(new JLabel("-"));
+        gbc.gridx = 2;
+        gbc.gridwidth = 3;
+        gbc.weightx = 3.0;
+        dataPanel.add(minFineField, gbc);
+        gbc.gridx = 5;
+        gbc.gridwidth = 1;
+        gbc.weightx = 0.1;
+        gbc.fill = 0;
+        dataPanel.add(new JLabel("-"), gbc);
         maxFineField = new JTextField();
         maxFineField.setText(String.valueOf( current.getMaxFine() ));
-        finePanel.add(maxFineField);
-        this.add(finePanel);
+        gbc.gridx = 6;
+        gbc.gridwidth = 3;
+        gbc.weightx = 3.0;
+        gbc.fill = GridBagConstraints.BOTH;
+        dataPanel.add(maxFineField, gbc);
 
-        datePanel = new JPanel();
-        datePanel.setLayout(new BoxLayout(datePanel, BoxLayout.X_AXIS));
-        datePanel.add(new JLabel("Data de aplicare(zi-luna-an):"));
+        gbc.gridx = 0;
+        gbc.gridy = 4;
+        gbc.gridwidth = 2;
+        dataPanel.add(new JLabel("Data de aplicare(zi-luna-an):"), gbc);
         dateField = new JTextField();
         dateField.setText(String.valueOf( current.getDate() ));
-        datePanel.add(dateField);
-        this.add(datePanel);
+        gbc.gridx = 2;
+        gbc.gridwidth = 7;
+        dataPanel.add(dateField, gbc);
 
-        submitPanel = new JPanel();
-        submitPanel.setLayout(new BoxLayout(submitPanel, BoxLayout.X_AXIS));
+        this.add(dataPanel, BorderLayout.CENTER);
+
         JButton cancelButton;
         addButton = new JButton("Modifică");
         addButton.setName("add");
@@ -88,14 +116,17 @@ public class CountDialog extends JDialog implements ActionListener{
         cancelButton.setName("cancel");
         cancelButton.addActionListener(this);
 
+        submitPanel = new JPanel();
+        submitPanel.setLayout(new BoxLayout(submitPanel, BoxLayout.X_AXIS));
         submitPanel.add(addButton);
         submitPanel.add(cancelButton);
-        this.add(submitPanel);
+        this.add(submitPanel, BorderLayout.SOUTH);
 
         accessible = false;
         added = new Count();
 
         this.pack();
+        this.setResizable(false);
     }
 
     public CountDialog(){
