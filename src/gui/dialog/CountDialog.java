@@ -1,6 +1,6 @@
 package gui.dialog;
 
-import entity.Count;
+import entity.Felony;
 
 import javax.swing.*;
 import java.awt.*;
@@ -11,13 +11,13 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class CountDialog extends JDialog implements ActionListener{
-    private Count added;
+    private Felony added;
     private boolean accessible;
     private JTextField descField, minJailField, maxJailField, minFineField, maxFineField, dateField;
     private JButton addButton;
     private JLabel errLabel;
 
-    public CountDialog(Count current){
+    public CountDialog(Felony current){
         super();
         this.setLocationRelativeTo(null);
         this.setTitle("Modificare faptă");
@@ -123,14 +123,14 @@ public class CountDialog extends JDialog implements ActionListener{
         this.add(submitPanel, BorderLayout.SOUTH);
 
         accessible = false;
-        added = new Count();
+        added = new Felony();
 
         this.pack();
         this.setResizable(false);
     }
 
     public CountDialog(){
-        this(new Count());
+        this(new Felony());
 
         addButton.setText("Adaugă");
         this.setTitle("Adăugare faptă");
@@ -177,7 +177,7 @@ public class CountDialog extends JDialog implements ActionListener{
         return accessible;
     }
 
-    public Count getAdded() {
+    public Felony getAdded() {
         if(accessible)
             return added;
         else

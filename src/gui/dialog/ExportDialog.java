@@ -1,6 +1,6 @@
 package gui.dialog;
 
-import entity.Count;
+import entity.Felony;
 
 import javax.swing.*;
 import javax.swing.filechooser.FileNameExtensionFilter;
@@ -35,7 +35,7 @@ public class ExportDialog {
         return file;
     }
 
-    public void export(List<Count> data){
+    public void export(List<Felony> data){
         file = new File("save.xml").getAbsolutePath();
 
         try {
@@ -48,7 +48,7 @@ public class ExportDialog {
             out.writeCharacters(System.getProperty("line.separator"));
 
             out.writeStartElement("Fapte");
-            out.writeAttribute("data", Count.format(new Date()));
+            out.writeAttribute("data", Felony.format(new Date()));
             out.writeCharacters(System.getProperty("line.separator"));
 
             //TO DO: Actualizeaza progress bar aici

@@ -2,44 +2,40 @@ package gui;
 
 import gui.dialog.ExportDialog;
 import gui.dialog.ImportDialog;
+import gui.panel.CircumstancePanel;
 import gui.panel.CountsPanel;
+import gui.panel.CurrentPanel;
 
 import javax.swing.*;
-import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.awt.event.MouseEvent;
-import java.awt.event.MouseListener;
+import java.awt.event.*;
 
-//TO DO: deschis fisier recent la initializare
-//TO DO: creat fisier la inchiderea programului
 //TO DO: completat fereastra pentru user
-public class Calculator extends JFrame implements ActionListener, MouseListener {
-    CountsPanel searchPanel;
-    JPanel setupPanel, jailPanel, finePanel;
+public class Calculator extends JFrame implements ActionListener, MouseListener, WindowListener {
+    CountsPanel countPanel;
+    CircumstancePanel circumstancePanel;
+    CurrentPanel currentPanel;
+    JPanel setupPanel;
 
     public Calculator(){
         JPanel content = (JPanel) this.getContentPane();
         content.setLayout( new BoxLayout(content, BoxLayout.X_AXIS) );
+        this.addWindowListener(this);
 
         setupPanel = new JPanel();
         setupPanel.setLayout( new BoxLayout(setupPanel, BoxLayout.X_AXIS) );
-        searchPanel = new CountsPanel();
-        searchPanel.readDate("demo.xml");
-        searchPanel.addMouseListener(this);
 
-        setupPanel.add(searchPanel);
+        countPanel = new CountsPanel();
+        countPanel.readData("cdemo.xml");
+        setupPanel.add(countPanel);
+
+        currentPanel = new CurrentPanel();
+        setupPanel.add(currentPanel);
+
+        circumstancePanel = new CircumstancePanel();
+        circumstancePanel.readData("sdemo.xml");
+        setupPanel.add(circumstancePanel);
+
         content.add(setupPanel);
-
-        JPanel sentencePanel, mainPanel;
-        sentencePanel = new JPanel();
-        sentencePanel.setLayout( new BoxLayout(sentencePanel, BoxLayout.Y_AXIS) );
-
-        mainPanel = new JPanel();
-        mainPanel.setBackground(Color.RED);
-
-        sentencePanel.add(mainPanel);
-        content.add(sentencePanel);
     }
 
     public static void main(String args[]){
@@ -101,13 +97,13 @@ public class Calculator extends JFrame implements ActionListener, MouseListener 
             if(text.equals("Import fapte...")){
                 ImportDialog id = new ImportDialog();
                 id.showDialog(this, "Alegere fisier");
-                searchPanel.readDate(id.getFile());
+                countPanel.readData(id.getFile());
             }
             else
             if(text.equals("Export fapte...")){
                 ExportDialog ed = new ExportDialog();
                 //ed.showDialog(this, "Export fisier");
-                ed.export(searchPanel.getList());
+                ed.export(countPanel.getList());
             }
             else
                 return;
@@ -118,7 +114,6 @@ public class Calculator extends JFrame implements ActionListener, MouseListener 
 
     @Override
     public void mouseClicked(MouseEvent e) {
-        System.out.println(e.getSource().getClass());
     }
 
     @Override
@@ -128,7 +123,6 @@ public class Calculator extends JFrame implements ActionListener, MouseListener 
 
     @Override
     public void mouseReleased(MouseEvent e) {
-
     }
 
     @Override
@@ -138,6 +132,41 @@ public class Calculator extends JFrame implements ActionListener, MouseListener 
 
     @Override
     public void mouseExited(MouseEvent e) {
+
+    }
+
+    @Override
+    public void windowOpened(WindowEvent e) {
+
+    }
+
+    @Override
+    public void windowClosing(WindowEvent e) {
+        System.out.println("Programul se inchide...");
+        //TO DO: export fisier curent
+    }
+
+    @Override
+    public void windowClosed(WindowEvent e) {
+    }
+
+    @Override
+    public void windowIconified(WindowEvent e) {
+
+    }
+
+    @Override
+    public void windowDeiconified(WindowEvent e) {
+
+    }
+
+    @Override
+    public void windowActivated(WindowEvent e) {
+
+    }
+
+    @Override
+    public void windowDeactivated(WindowEvent e) {
 
     }
 }

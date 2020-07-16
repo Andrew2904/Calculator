@@ -1,6 +1,6 @@
 package util;
 
-import entity.Count;
+import entity.Felony;
 import org.xml.sax.Attributes;
 import org.xml.sax.SAXException;
 import org.xml.sax.helpers.DefaultHandler;
@@ -10,8 +10,8 @@ import java.util.List;
 
 public class Handler extends DefaultHandler {
     boolean bDesc, bMinJail, bMaxJail, bMinFine, bMaxFine, bLast;
-    List<Count> list;
-    Count current;
+    List<Felony> list;
+    Felony current;
     String last;
 
     public Handler(){
@@ -31,7 +31,7 @@ public class Handler extends DefaultHandler {
                 last = attributes.getValue("data");
                 break;
             case "fapta":
-                current = new Count();
+                current = new Felony();
                 break;
             case "denumire":
                 bDesc = true;
@@ -98,7 +98,7 @@ public class Handler extends DefaultHandler {
             current.setDate(value);
     }
 
-    public List<Count> getList(){
+    public List<Felony> getList(){
         return list;
     }
 

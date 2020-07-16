@@ -1,6 +1,6 @@
 package util;
 
-import entity.Count;
+import entity.Felony;
 import javax.xml.parsers.SAXParser;
 import javax.xml.parsers.SAXParserFactory;
 import java.io.File;
@@ -8,12 +8,12 @@ import java.util.Date;
 import java.util.List;
 
 public class XMLParser {
-    List<Count> data;
+    List<Felony> data;
     String last;
 
     public XMLParser(){
         data = null;
-        last = Count.format(new Date());
+        last = Felony.format(new Date());
     }
 
     public void read(String file){
@@ -31,7 +31,7 @@ public class XMLParser {
         }
     }
 
-    public List<Count> getData() {
+    public List<Felony> getData() {
         return data;
     }
 

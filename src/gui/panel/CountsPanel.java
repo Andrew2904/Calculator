@@ -4,7 +4,7 @@ import javax.swing.*;
 
 import gui.Calculator;
 import gui.dialog.CountDialog;
-import entity.Count;
+import entity.Felony;
 import gui.list.CountRenderer;
 import util.XMLParser;
 
@@ -16,7 +16,7 @@ import java.util.List;
 //TO DO: Adaugat mesaje de eroare vizibile pentru user
 //TO DO: Check events
 public class CountsPanel extends JPanel implements ActionListener, KeyListener, MouseListener{
-    List<Count> data;
+    List<Felony> data;
     JList countList;
     JTextField searchField;
     XMLParser parser;
@@ -28,7 +28,7 @@ public class CountsPanel extends JPanel implements ActionListener, KeyListener, 
 
         searchField.addKeyListener(this);
 
-        data = new ArrayList<Count>();
+        data = new ArrayList<Felony>();
 
         parser = new XMLParser();
 
@@ -65,7 +65,7 @@ public class CountsPanel extends JPanel implements ActionListener, KeyListener, 
         this.add(buttonPanel);
     }
 
-    public void readDate(String source){
+    public void readData(String source){
         parser.read(source);
         data = parser.getData();
         getData();
@@ -78,13 +78,13 @@ public class CountsPanel extends JPanel implements ActionListener, KeyListener, 
         String term = searchField.getText();
 
         DefaultListModel listData = new DefaultListModel();
-        for(Count entry:data)
+        for(Felony entry:data)
             if(entry.contains(term))
                 listData.addElement(entry);
         countList.setModel(listData);
     }
 
-    public List<Count> getList(){
+    public List<Felony> getList(){
         return data;
     }
 
@@ -108,7 +108,7 @@ public class CountsPanel extends JPanel implements ActionListener, KeyListener, 
         JButton source = (JButton) e.getSource();
         CountDialog ad;
         int i;
-        Count added;
+        Felony added;
 
         switch (source.getText()){
             case "Adaugă fapta":

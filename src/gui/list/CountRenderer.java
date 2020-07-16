@@ -1,6 +1,6 @@
 package gui.list;
 
-import entity.Count;
+import entity.Felony;
 import util.ResourceManager;
 
 import javax.swing.*;
@@ -8,12 +8,12 @@ import javax.swing.border.Border;
 import javax.swing.border.EmptyBorder;
 import java.awt.*;
 
-public class CountRenderer extends JPanel implements ListCellRenderer<Count> {
+public class CountRenderer extends JPanel implements ListCellRenderer<Felony> {
     int w = 25, h = 25, t = 5;
     int width = 40;
 
     @Override
-    public Component getListCellRendererComponent(JList<? extends Count> list, Count value, int index, boolean isSelected, boolean cellHasFocus) {
+    public Component getListCellRendererComponent(JList<? extends Felony> list, Felony value, int index, boolean isSelected, boolean cellHasFocus) {
         removeAll();
         Border mainBorder, paddingBorder;
         if(isSelected)
@@ -67,7 +67,7 @@ public class CountRenderer extends JPanel implements ListCellRenderer<Count> {
 
         jailLabel.setText(jailText+value.getMinJail()+" - "+value.getMaxJail());
         fineLabel.setText(fineText+value.getMinFine()+" - "+value.getMaxFine());
-        lastLabel.setText(value.getDate().toString());
+        lastLabel.setText(value.getDate());
 
         add(descLabel);
         add(jailLabel);

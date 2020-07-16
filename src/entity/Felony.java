@@ -3,14 +3,14 @@ package entity;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-public class Count {
+public class Felony {
     private String desc;
     private String date;
     private Sentence sentence;
 
     static SimpleDateFormat format = new SimpleDateFormat("dd-MM-yyyy");
 
-    public Count(String desc, int minJail, int maxJail, int minFine, int maxFine, String update){
+    public Felony(String desc, int minJail, int maxJail, int minFine, int maxFine, String update){
         this.desc = desc;
 
         this.sentence = new Sentence(minJail, maxJail, minFine, maxFine);
@@ -18,19 +18,19 @@ public class Count {
         this.date = update;
     }
 
-    public Count(String desc, int minJail, int maxJail, int minFine, int maxFine, Date update){
+    public Felony(String desc, int minJail, int maxJail, int minFine, int maxFine, Date update){
         this(desc, minJail, maxJail, minFine,maxFine, format.format(update));
     }
 
-    public Count(){
-        this("", -1, -1, -1, -1, format.format(new Date()));
+    public Felony(){
+        this("", 0, 0, 0, 0, format.format(new Date()));
     }
 
-    public Count(String desc, int minJail, int maxJail, int minFine, int maxFine){
+    public Felony(String desc, int minJail, int maxJail, int minFine, int maxFine){
         this( desc, minJail, maxJail, minFine, maxFine, format.format(new Date()));
     }
 
-    public Count(Count original){
+    public Felony(Felony original){
         this( original.desc, original.getMinJail(), original.getMaxJail(), original.getMinFine(), original.getMaxFine(), original.date);
     }
 
@@ -90,6 +90,10 @@ public class Count {
         return desc;
     }
 
+    public Sentence getSentence(){
+        return sentence;
+    }
+
     public boolean contains(String substring){
         return desc.toLowerCase().contains( substring.toLowerCase() );
     }
@@ -100,5 +104,13 @@ public class Count {
 
     public static String format(Date date){
         return format.format(date);
+    }
+
+    public void setSentence(Sentence sentence) {
+        this.sentence = sentence;
+    }
+
+    public void update(){
+        sentence.order();
     }
 }

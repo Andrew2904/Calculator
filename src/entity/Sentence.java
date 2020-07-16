@@ -4,6 +4,8 @@ public class Sentence {
     private int minJail, maxJail;
     private int minFine, maxFine;
 
+    private static int year_day=360, month_day=30;
+
     public Sentence(int minJail, int maxJail, int minFine, int maxFine){
         this.minJail = minJail;
         this.maxJail = maxJail;
@@ -12,7 +14,7 @@ public class Sentence {
     }
 
     public Sentence(){
-        this(-1, -1, -1, -1);
+        this(0, 0, 0, 0);
     }
 
     public Sentence(Sentence original){
@@ -20,39 +22,19 @@ public class Sentence {
     }
 
     public void setMinJail(int jail) {
-        if(this.minJail>=0 && jail>this.maxJail){
-            this.minJail = this.maxJail;
-            this.maxJail = jail;
-        }
-        else
-            this.minJail = jail;
+        this.minJail = jail;
     }
 
     public void setMaxJail(int jail) {
-        if(jail<this.minJail){
-            this.maxJail = this.minJail;
-            this.minJail = jail;
-        }
-        else
-            this.maxJail = jail;
+        this.maxJail = jail;
     }
 
     public void setMinFine(int fine) {
-        if(this.minFine>=0 && fine>this.maxFine){
-            this.minFine = this.maxFine;
-            this.minFine = fine;
-        }
-        else
-            this.minFine = fine;
+        this.minFine = fine;
     }
 
     public void setMaxFine(int fine) {
-        if(fine<this.minFine){
-            this.maxFine = this.minFine;
-            this.minFine = fine;
-        }
-        else
-            this.maxFine = fine;
+        this.maxFine = fine;
     }
 
     public int getMaxFine() {
@@ -77,7 +59,117 @@ public class Sentence {
 
         minJail += s.getMinJail();
         maxJail += s.getMaxJail();
+
+        order();
     }
 
+    public void add(Circumstance s){
+        if(s.isAggro()) {
+            minFine += s.getMinFine();
+            maxFine += s.getMaxFine();
 
+            minJail += s.getMinJail();
+            maxJail += s.getMaxJail();
+        }
+        else{
+            minFine -= s.getMinFine();
+            maxFine -= s.getMaxFine();
+
+            minJail -= s.getMinJail();
+            maxJail -= s.getMaxJail();
+        }
+
+        order();
+    }
+
+    public void sub(Sentence s){
+        minFine -= s.getMinFine();
+        maxFine -= s.getMaxFine();
+
+        minJail -= s.getMinJail();
+        maxJail -= s.getMaxJail();
+
+        order();
+    }
+
+    public void sub(Circumstance s){
+        minFine -= s.getMinFine();
+        maxFine -= s.getMaxFine();
+
+        minJail -= s.getMinJail();
+        maxJail -= s.getMaxJail();
+
+        order();
+    }
+
+    public void addCircumstance(Circumstance circumstance){
+        if(circumstance.isFixed())
+            add(circumstance);
+        else
+            mul(circumstance);
+    }
+
+    public void mul(Circumstance s){
+         minFine = (int) (minFine * s.getMinFineRatio());
+         maxFine = (int) (maxFine * s.getMaxFineRatio());
+
+         minJail = (int) (minJail * s.getMinJailRatio());
+         maxJail = (int) (maxJail * s.getMaxJailRatio());
+
+        order();
+    }
+
+    public void mul(float change){
+        minFine = (int) (minFine * change);
+        maxFine = (int) (maxFine * change);
+
+        minJail = (int) (minJail * change);
+        maxJail = (int) (maxJail * change);
+
+        order();
+    }
+
+    public void set(Sentence s){
+        minJail = s.minJail;
+        maxJail = s.maxJail;
+        minFine = s.minFine;
+        maxFine = s.maxFine;
+
+        order();
+    }
+
+    public void order(){
+        int jail, fine;
+
+        if(minJail>maxJail){
+            jail = minJail;
+            minJail = maxJail;
+            maxJail = jail;
+        }
+        if(minFine>maxFine){
+            fine = minFine;
+            minFine = maxFine;
+            maxFine = fine;
+        }
+    }
+
+    public boolean isGreater(Sentence s){
+        return maxJail>s.maxJail;
+    }
+
+    public static int getYear(int days){
+        return days/year_day+days%year_day/month_day/12;
+    }
+
+    public static int getMonth(int days){
+        return days%year_day/month_day%12;
+    }
+
+    public static int getDay(int days){
+        return days%year_day%month_day;
+    }
+
+    public static int getDays(int year, int month, int day){
+        return year*year_day+month*month_day+day;
+    }
 }

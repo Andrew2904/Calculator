@@ -1,13 +1,11 @@
 package gui.demo;
 
-import entity.Felony;
-
 import javax.swing.*;
 import javax.swing.border.Border;
 import javax.swing.border.EmptyBorder;
 import java.awt.*;
 
-public class FelonyRenderer extends JPanel implements ListCellRenderer{
+public class CircumstanceRenderer extends JPanel implements ListCellRenderer{
     int t = 5;
 
     @Override
