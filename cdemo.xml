@@ -1,6 +1,163 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<circumstante data="17-02-2020">
-<circumstanta>
-
-</circumstanta>
-</circumstante>
+<Fapte data="25-11-2019">
+    <Fapta>
+        <Denumire>Fapta 1. Supercalifragilistic 1. Supercalifragilistic 2. Supercalifragilistic 3. Supercalifragilistic 4. </Denumire>
+        <MinInchisoare>101</MinInchisoare>
+		<MaxInchisoare>102</MaxInchisoare>
+        <MinAmenda>100</MinAmenda>
+		<MaxAmenda>300</MaxAmenda>
+        <Editare>25-11-2019</Editare>
+    </Fapta>
+	<Fapta>
+        <Denumire>Fapta 1. Supercalifragilistic 2.</Denumire>
+        <MinInchisoare>102</MinInchisoare>
+		<MaxInchisoare>101</MaxInchisoare>
+		<MinAmenda>100</MinAmenda>
+        <MaxAmenda>100</MaxAmenda>
+        <Editare>25-11-2019</Editare>
+    </Fapta>
+	<Fapta>
+        <Denumire>Fapta 3</Denumire>
+        <MinInchisoare>102</MinInchisoare>
+		<MaxInchisoare>101</MaxInchisoare>
+		<MinAmenda>100</MinAmenda>
+        <MaxAmenda>100</MaxAmenda>
+        <Editare>25-11-2019</Editare>
+    </Fapta>
+	<Fapta>
+        <Denumire>Fapta 4</Denumire>
+        <MinInchisoare>102</MinInchisoare>
+		<MaxInchisoare>101</MaxInchisoare>
+		<MinAmenda>100</MinAmenda>
+        <MaxAmenda>100</MaxAmenda>
+        <Editare>25-11-2019</Editare>
+    </Fapta>
+	<Fapta>
+        <Denumire>Fapta 5</Denumire>
+        <MinInchisoare>102</MinInchisoare>
+		<MaxInchisoare>101</MaxInchisoare>
+		<MinAmenda>100</MinAmenda>
+        <MaxAmenda>100</MaxAmenda>
+        <Editare>25-11-2019</Editare>
+    </Fapta>
+	<Fapta>
+        <Denumire>Furt 6</Denumire>
+        <MinInchisoare>102</MinInchisoare>
+		<MaxInchisoare>101</MaxInchisoare>
+		<MinAmenda>100</MinAmenda>
+        <MaxAmenda>100</MaxAmenda>
+        <Editare>25-11-2019</Editare>
+    </Fapta>
+	<Fapta>
+        <Denumire>Furt 7</Denumire>
+        <MinInchisoare>102</MinInchisoare>
+		<MaxInchisoare>101</MaxInchisoare>
+		<MinAmenda>100</MinAmenda>
+        <MaxAmenda>100</MaxAmenda>
+        <Editare>25-11-2019</Editare>
+    </Fapta>
+	<Fapta>
+        <Denumire>Furt 8</Denumire>
+        <MinInchisoare>102</MinInchisoare>
+		<MaxInchisoare>101</MaxInchisoare>
+		<MinAmenda>100</MinAmenda>
+        <MaxAmenda>100</MaxAmenda>
+        <Editare>25-11-2019</Editare>
+    </Fapta>
+	<Fapta>
+        <Denumire>Furt 9</Denumire>
+        <MinInchisoare>102</MinInchisoare>
+		<MaxInchisoare>101</MaxInchisoare>
+		<MinAmenda>100</MinAmenda>
+        <MaxAmenda>100</MaxAmenda>
+        <Editare>25-11-2019</Editare>
+    </Fapta>
+	<Fapta>
+        <Denumire>Furt 10</Denumire>
+        <MinInchisoare>102</MinInchisoare>
+		<MaxInchisoare>101</MaxInchisoare>
+		<MinAmenda>100</MinAmenda>
+        <MaxAmenda>100</MaxAmenda>
+        <Editare>25-11-2019</Editare>
+    </Fapta>
+	<Fapta>
+        <Denumire>Jaf 11</Denumire>
+        <MinInchisoare>102</MinInchisoare>
+		<MaxInchisoare>101</MaxInchisoare>
+		<MinAmenda>110</MinAmenda>
+        <MaxAmenda>101</MaxAmenda>
+        <Editare>25-11-2019</Editare>
+    </Fapta>
+	<Fapta>
+        <Denumire>Jaf 12</Denumire>
+        <MinInchisoare>102</MinInchisoare>
+		<MaxInchisoare>101</MaxInchisoare>
+		<MinAmenda>100</MinAmenda>
+        <MaxAmenda>100</MaxAmenda>
+        <Editare>25-11-2019</Editare>
+    </Fapta>
+	<Fapta>
+        <Denumire>Jaf 13</Denumire>
+        <MinInchisoare>102</MinInchisoare>
+		<MaxInchisoare>101</MaxInchisoare>
+		<MinAmenda>100</MinAmenda>
+        <MaxAmenda>100</MaxAmenda>
+        <Editare>25-11-2019</Editare>
+    </Fapta>
+	<Fapta>
+        <Denumire>Jaf 14</Denumire>
+        <MinInchisoare>102</MinInchisoare>
+		<MaxInchisoare>101</MaxInchisoare>
+		<MinAmenda>100</MinAmenda>
+        <MaxAmenda>100</MaxAmenda>
+        <Editare>25-11-2019</Editare>
+    </Fapta>
+	<Fapta>
+        <Denumire>Jaf 15</Denumire>
+        <MinInchisoare>102</MinInchisoare>
+		<MaxInchisoare>101</MaxInchisoare>
+		<MinAmenda>100</MinAmenda>
+        <MaxAmenda>100</MaxAmenda>
+        <Editare>25-11-2019</Editare>
+    </Fapta>
+	<Fapta>
+        <Denumire>Inselatorie 16</Denumire>
+        <MinInchisoare>102</MinInchisoare>
+		<MaxInchisoare>101</MaxInchisoare>
+		<MinAmenda>100</MinAmenda>
+        <MaxAmenda>100</MaxAmenda>
+        <Editare>25-11-2019</Editare>
+    </Fapta>
+	<Fapta>
+        <Denumire>Inselatorie 17</Denumire>
+        <MinInchisoare>102</MinInchisoare>
+		<MaxInchisoare>101</MaxInchisoare>
+		<MinAmenda>100</MinAmenda>
+        <MaxAmenda>100</MaxAmenda>
+        <Editare>25-11-2019</Editare>
+    </Fapta>
+	<Fapta>
+        <Denumire>Inselatorie 18</Denumire>
+        <MinInchisoare>102</MinInchisoare>
+		<MaxInchisoare>101</MaxInchisoare>
+		<MinAmenda>100</MinAmenda>
+        <MaxAmenda>100</MaxAmenda>
+        <Editare>25-11-2019</Editare>
+    </Fapta>
+	<Fapta>
+        <Denumire>Inselatorie 19</Denumire>
+        <MinInchisoare>102</MinInchisoare>
+		<MaxInchisoare>101</MaxInchisoare>
+		<MinAmenda>100</MinAmenda>
+        <MaxAmenda>100</MaxAmenda>
+        <Editare>25-11-2019</Editare>
+    </Fapta>
+	<Fapta>
+        <Denumire>Inselatorie 20</Denumire>
+        <MinInchisoare>101</MinInchisoare>
+		<MaxInchisoare>105</MaxInchisoare>
+		<MinAmenda>100</MinAmenda>
+        <MaxAmenda>100</MaxAmenda>
+        <Editare>25-11-2019</Editare>
+    </Fapta>
+</Fapte>
