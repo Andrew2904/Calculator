@@ -1,6 +1,7 @@
 package util;
 
 import javax.imageio.ImageIO;
+import javax.swing.*;
 import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.File;
@@ -40,5 +41,9 @@ public class ResourceManager {
 
     public static Image getImageFromResources(String filename) throws Exception {
         return getImageFromResources(filename, 10, 10);
+    }
+
+    public static ImageIcon getIconFromResources(String filename) throws Exception {
+        return new ImageIcon( getImageFromResources(filename, 100, 100) );
     }
 }

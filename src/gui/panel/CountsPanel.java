@@ -21,10 +21,14 @@ public class CountsPanel extends JPanel implements ActionListener, KeyListener, 
     JTextField searchField;
     XMLParser parser;
 
-    public CountsPanel(){
+    Calculator parent;
+
+    public CountsPanel(Calculator parent){
         this.setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
         this.setBackground(Color.BLACK);
         searchField = new JTextField();
+
+        this.parent = parent;
 
         searchField.addKeyListener(this);
 
@@ -149,13 +153,9 @@ public class CountsPanel extends JPanel implements ActionListener, KeyListener, 
     public void mouseClicked(MouseEvent e) {
         JComponent source = (JComponent) e.getSource();
         System.out.println("Click");
-        do{
-            //System.out.println("Searching... "+source.getClass());
-            source = (JComponent) source.getParent();
-        }while(source!=null && !(source.getParent() instanceof Calculator));
 
-        Calculator parent = (Calculator) source.getParent();
         parent.mouseClicked(e);
+        parent.updateCircumstance(data.get( countList.getSelectedIndex() ) );
     }
 
     @Override
@@ -163,14 +163,8 @@ public class CountsPanel extends JPanel implements ActionListener, KeyListener, 
         if(e.getClickCount()!=1)
             return;
 
-        JComponent source = (JComponent) e.getSource();
         System.out.println("Hooooooooooooooooold");
-        do{
-            //System.out.println("Searching... "+source.getClass());
-            source = (JComponent) source.getParent();
-        }while(source!=null && !(source.getParent() instanceof Calculator));
 
-        Calculator parent = (Calculator) source.getParent();
         parent.mouseClicked(e);
     }
 

@@ -1,10 +1,12 @@
 package gui;
 
+import entity.Felony;
 import gui.dialog.ExportDialog;
 import gui.dialog.ImportDialog;
 import gui.panel.CircumstancePanel;
 import gui.panel.CountsPanel;
 import gui.panel.CurrentPanel;
+import util.ResourceManager;
 
 import javax.swing.*;
 import java.awt.event.*;
@@ -24,7 +26,7 @@ public class Calculator extends JFrame implements ActionListener, MouseListener,
         setupPanel = new JPanel();
         setupPanel.setLayout( new BoxLayout(setupPanel, BoxLayout.X_AXIS) );
 
-        countPanel = new CountsPanel();
+        countPanel = new CountsPanel(this);
         countPanel.readData("cdemo.xml");
         setupPanel.add(countPanel);
 
@@ -44,6 +46,11 @@ public class Calculator extends JFrame implements ActionListener, MouseListener,
         frame.setTitle("Calculator");
         frame.setSize(400,400);
         frame.setLocation(200,200);
+        try {
+            frame.setIconImage( ResourceManager.getIconFromResources("icon2.png").getImage() );
+        } catch (Exception e) {
+            System.err.println("Lipseste icon.ico din resurse");
+        }
 
         frame.setJMenuBar(frame.getMenu());
 
@@ -168,5 +175,9 @@ public class Calculator extends JFrame implements ActionListener, MouseListener,
     @Override
     public void windowDeactivated(WindowEvent e) {
 
+    }
+
+    public void updateCircumstance(Felony base){
+        circumstancePanel.updateBase(base);
     }
 }
