@@ -1,4 +1,4 @@
-package entity;
+package data.entity;
 
 public class Circumstance {
     private boolean fixed, aggro;

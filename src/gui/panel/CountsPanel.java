@@ -4,7 +4,7 @@ import javax.swing.*;
 
 import gui.Calculator;
 import gui.dialog.CountDialog;
-import entity.Felony;
+import data.entity.Felony;
 import gui.list.CountRenderer;
 import util.XMLParser;
 
@@ -23,12 +23,12 @@ public class CountsPanel extends JPanel implements ActionListener, KeyListener, 
 
     Calculator parent;
 
-    public CountsPanel(Calculator parent){
-        this.setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
-        this.setBackground(Color.BLACK);
+    public CountsPanel(){
+        setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
+        setBackground(Color.BLACK);
         searchField = new JTextField();
 
-        this.parent = parent;
+        parent = Calculator.getInstance();
 
         searchField.addKeyListener(this);
 

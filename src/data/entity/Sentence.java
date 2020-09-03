@@ -1,4 +1,4 @@
-package entity;
+package data.entity;
 
 public class Sentence {
     private int minJail, maxJail;

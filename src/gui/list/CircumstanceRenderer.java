@@ -1,6 +1,6 @@
 package gui.list;
 
-import entity.Circumstance;
+import data.entity.Circumstance;
 
 import javax.swing.*;
 import java.awt.*;

@@ -1,6 +1,6 @@
 package gui.dialog;
 
-import entity.Felony;
+import data.entity.Felony;
 
 import javax.swing.*;
 import java.awt.*;

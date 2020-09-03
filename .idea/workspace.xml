@@ -7,24 +7,41 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="52209253-6fa0-4455-a39e-1b177776e360" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/res/format.props" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/data/parser/CircumstanceXml.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/data/parser/FelonyXml.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Calculator.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Calculator.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Calculator_jar/Calculator.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Calculator_jar/Calculator.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Calculator/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Calculator/META-INF/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Calculator/entity/Circumstance.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Calculator/entity/Count.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Calculator/entity/Sentence.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Calculator/gui/Calculator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Calculator/gui/Calculator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Calculator/gui/dialog/CountDialog.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Calculator/gui/dialog/CountDialog.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Calculator/gui/dialog/ExportDialog.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Calculator/gui/dialog/ExportDialog.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Calculator/gui/list/CircumstanceRenderer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Calculator/gui/list/CircumstanceRenderer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Calculator/gui/list/CountRenderer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Calculator/gui/list/CountRenderer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Calculator/gui/panel/CircumstancePanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Calculator/gui/panel/CircumstancePanel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Calculator/gui/panel/CountsPanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Calculator/gui/panel/CountsPanel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Calculator/gui/panel/CurrentPanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Calculator/gui/panel/CurrentPanel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Calculator/util/Handler.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Calculator/util/ResourceManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Calculator/util/ResourceManager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Calculator/util/XMLParser.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Calculator/util/XMLParser.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/save.xml" beforeDir="false" afterPath="$PROJECT_DIR$/save.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/entity/Circumstance.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/entity/Circumstance.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/entity/Count.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/entity/Count.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/entity/Felony.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/entity/Felony.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/entity/Sentence.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/entity/Sentence.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/gui/Calculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/Calculator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/Concept.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/demo/CircumstancePanel.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/demo/CircumstanceRenderer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/demo/FelonyPanel.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/demo/FelonyRenderer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/demo/SentencePanel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/dialog/CountDialog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/dialog/CountDialog.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/dialog/ExportDialog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/dialog/ExportDialog.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/list/CircumstanceRenderer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/list/CircumstanceRenderer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/list/CountRenderer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/list/CountRenderer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/list/CurrentRenderer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/list/CurrentRenderer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/gui/panel/CircumstancePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/panel/CircumstancePanel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/gui/panel/CountsPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/panel/CountsPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/panel/CurrentPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/panel/CurrentPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/util/Handler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/handler/FelonyHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/util/ResourceManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/util/ResourceManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/util/Sentence.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/util/XMLParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/util/XMLParser.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -199,6 +216,9 @@
       <workItem from="1597911038207" duration="819000" />
       <workItem from="1598432312658" duration="1194000" />
       <workItem from="1598518410377" duration="5548000" />
+      <workItem from="1599044851010" duration="388000" />
+      <workItem from="1599132538536" duration="6177000" />
+      <workItem from="1599142204966" duration="525000" />
     </task>
     <task id="LOCAL-00001" summary="Dialog acceptabil pentru fapte">
       <created>1586950851288</created>
@@ -280,6 +300,10 @@
       <screen x="0" y="0" width="1280" height="984" />
     </state>
     <state x="314" y="367" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1280.984@0.0.1280.984" timestamp="1594902956088" />
+    <state x="353" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1599137221325">
+      <screen x="0" y="0" width="1280" height="984" />
+    </state>
+    <state x="353" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1280.984@0.0.1280.984" timestamp="1599137221325" />
     <state x="387" y="254" width="463" height="485" key="#com.intellij.tools.ToolEditorDialog" timestamp="1594903031984">
       <screen x="0" y="0" width="1280" height="984" />
     </state>
@@ -292,22 +316,38 @@
       <screen x="0" y="0" width="1280" height="984" />
     </state>
     <state x="420" y="246" key="FileChooserDialogImpl/0.0.1280.984@0.0.1280.984" timestamp="1594903243215" />
-    <state width="1237" height="263" key="GridCell.Tab.0.bottom" timestamp="1598530718814">
+    <state width="1237" height="263" key="GridCell.Tab.0.bottom" timestamp="1599142891122">
       <screen x="0" y="0" width="1280" height="984" />
     </state>
-    <state width="1237" height="263" key="GridCell.Tab.0.bottom/0.0.1280.984@0.0.1280.984" timestamp="1598530718814" />
-    <state width="1237" height="263" key="GridCell.Tab.0.center" timestamp="1598530718814">
+    <state width="1237" height="263" key="GridCell.Tab.0.bottom/0.0.1280.984@0.0.1280.984" timestamp="1599142891122" />
+    <state width="1237" height="263" key="GridCell.Tab.0.center" timestamp="1599142891122">
       <screen x="0" y="0" width="1280" height="984" />
     </state>
-    <state width="1237" height="263" key="GridCell.Tab.0.center/0.0.1280.984@0.0.1280.984" timestamp="1598530718814" />
-    <state width="1237" height="263" key="GridCell.Tab.0.left" timestamp="1598530718813">
+    <state width="1237" height="263" key="GridCell.Tab.0.center/0.0.1280.984@0.0.1280.984" timestamp="1599142891122" />
+    <state width="1237" height="263" key="GridCell.Tab.0.left" timestamp="1599142891122">
       <screen x="0" y="0" width="1280" height="984" />
     </state>
-    <state width="1237" height="263" key="GridCell.Tab.0.left/0.0.1280.984@0.0.1280.984" timestamp="1598530718813" />
-    <state width="1237" height="263" key="GridCell.Tab.0.right" timestamp="1598530718814">
+    <state width="1237" height="263" key="GridCell.Tab.0.left/0.0.1280.984@0.0.1280.984" timestamp="1599142891122" />
+    <state width="1237" height="263" key="GridCell.Tab.0.right" timestamp="1599142891122">
       <screen x="0" y="0" width="1280" height="984" />
     </state>
-    <state width="1237" height="263" key="GridCell.Tab.0.right/0.0.1280.984@0.0.1280.984" timestamp="1598530718814" />
+    <state width="1237" height="263" key="GridCell.Tab.0.right/0.0.1280.984@0.0.1280.984" timestamp="1599142891122" />
+    <state width="1237" height="325" key="GridCell.Tab.1.bottom" timestamp="1599142196126">
+      <screen x="0" y="0" width="1280" height="984" />
+    </state>
+    <state width="1237" height="325" key="GridCell.Tab.1.bottom/0.0.1280.984@0.0.1280.984" timestamp="1599142196125" />
+    <state width="1237" height="325" key="GridCell.Tab.1.center" timestamp="1599142196125">
+      <screen x="0" y="0" width="1280" height="984" />
+    </state>
+    <state width="1237" height="325" key="GridCell.Tab.1.center/0.0.1280.984@0.0.1280.984" timestamp="1599142196125" />
+    <state width="1237" height="325" key="GridCell.Tab.1.left" timestamp="1599142196125">
+      <screen x="0" y="0" width="1280" height="984" />
+    </state>
+    <state width="1237" height="325" key="GridCell.Tab.1.left/0.0.1280.984@0.0.1280.984" timestamp="1599142196125" />
+    <state width="1237" height="325" key="GridCell.Tab.1.right" timestamp="1599142196125">
+      <screen x="0" y="0" width="1280" height="984" />
+    </state>
+    <state width="1237" height="325" key="GridCell.Tab.1.right/0.0.1280.984@0.0.1280.984" timestamp="1599142196125" />
     <state x="120" y="66" key="SettingsEditor" timestamp="1595667514106">
       <screen x="0" y="0" width="1280" height="984" />
     </state>
@@ -340,8 +380,23 @@
           <line>234</line>
           <option name="timeStamp" value="20" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/gui/panel/CountsPanel.java</url>
+          <line>167</line>
+          <option name="timeStamp" value="21" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/util/ResourceManager.java</url>
+          <line>65</line>
+          <option name="timeStamp" value="24" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+    <watches-manager>
+      <configuration name="Application">
+        <watch expression="prop.getProperty(&quot;date_format&quot;)" language="JAVA" />
+      </configuration>
+    </watches-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Calculator$Unnamed.ic" NAME="Unnamed Coverage Results" MODIFIED="1588526797217" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />

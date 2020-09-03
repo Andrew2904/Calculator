@@ -1,6 +1,6 @@
 package gui.panel;
 
-import entity.Count;
+import data.entity.Count;
 
 import javax.swing.*;
 import java.util.List;

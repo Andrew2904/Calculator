@@ -1,6 +1,8 @@
 package util;
 
-import entity.Felony;
+import data.entity.Felony;
+import data.handler.FelonyHandler;
+
 import javax.xml.parsers.SAXParser;
 import javax.xml.parsers.SAXParserFactory;
 import java.io.File;
@@ -8,24 +10,25 @@ import java.util.Date;
 import java.util.List;
 
 public class XMLParser {
-    List<Felony> data;
+    List data;
     String last;
 
     public XMLParser(){
         data = null;
-        last = Felony.format(new Date());
+        //last = Felony.format(new Date());
+        last = ResourceManager.format( new Date() );
     }
 
     public void read(String file){
         try {
             SAXParserFactory factory = SAXParserFactory.newInstance();
             SAXParser saxParser = factory.newSAXParser();
-            Handler handler = new Handler();
+            FelonyHandler felonyHandler = new FelonyHandler();
 
-            saxParser.parse(new File(file).getAbsolutePath(), handler);
+            saxParser.parse(new File(file).getAbsolutePath(), felonyHandler);
 
-            data = handler.getList();
-            last = handler.getLast();
+            data = felonyHandler.getList();
+            last = felonyHandler.getLast();
         } catch (Exception e) {
             System.err.println(e.getMessage());
         }
