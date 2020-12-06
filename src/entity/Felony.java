@@ -1,30 +1,21 @@
-package data.entity;
+package entity;
 
-import util.ResourceManager;
-
-import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class Felony {
     private String desc;
-    private Date date;
+    private String date;
     private Sentence sentence;
 
-    static SimpleDateFormat format = new SimpleDateFormat( ResourceManager.getProperty("date_read") );
-    static SimpleDateFormat wformat = new SimpleDateFormat( ResourceManager.getProperty("date_write") );
+    static SimpleDateFormat format = new SimpleDateFormat("dd-MM-yyyy");
 
     public Felony(String desc, int minJail, int maxJail, int minFine, int maxFine, String update){
         this.desc = desc;
 
         this.sentence = new Sentence(minJail, maxJail, minFine, maxFine);
 
-        try {
-            this.date = format.parse(update);
-        } catch (ParseException e) {
-            e.printStackTrace();
-            this.date = new Date();
-        }
+        this.date = update;
     }
 
     public Felony(String desc, int minJail, int maxJail, int minFine, int maxFine, Date update){
@@ -64,16 +55,11 @@ public class Felony {
     }
 
     public void setDate(String date){
-        try {
-            this.date = format.parse(date);
-        } catch (ParseException e) {
-            e.printStackTrace();
-            this.date = new Date();
-        }
+        this.date = date;
     }
 
     public void setDate(Date date){
-        this.date = date;
+        this.date = format.format(date);
     }
 
     public String getDesc() {
@@ -97,7 +83,7 @@ public class Felony {
     }
 
     public String getDate(){
-        return wformat.format(date);
+        return date;
     }
 
     public String toString(){
@@ -110,6 +96,14 @@ public class Felony {
 
     public boolean contains(String substring){
         return desc.toLowerCase().contains( substring.toLowerCase() );
+    }
+
+    public static void setFormat(String newFormat){
+        format = new SimpleDateFormat(newFormat);
+    }
+
+    public static String format(Date date){
+        return format.format(date);
     }
 
     public void setSentence(Sentence sentence) {

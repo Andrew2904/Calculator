@@ -1,6 +1,6 @@
-package data.handler;
+package util;
 
-import data.entity.Felony;
+import entity.Felony;
 import org.xml.sax.Attributes;
 import org.xml.sax.SAXException;
 import org.xml.sax.helpers.DefaultHandler;
@@ -8,13 +8,13 @@ import org.xml.sax.helpers.DefaultHandler;
 import java.util.ArrayList;
 import java.util.List;
 
-public class FelonyHandler extends DefaultHandler {
+public class Handler extends DefaultHandler {
     boolean bDesc, bMinJail, bMaxJail, bMinFine, bMaxFine, bLast;
     List<Felony> list;
     Felony current;
     String last;
 
-    public FelonyHandler(){
+    public Handler(){
         bDesc = false;
         bMinJail = false;
         bMaxJail = false;

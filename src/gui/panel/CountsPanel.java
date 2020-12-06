@@ -4,7 +4,7 @@ import javax.swing.*;
 
 import gui.Calculator;
 import gui.dialog.CountDialog;
-import data.entity.Felony;
+import entity.Felony;
 import gui.list.CountRenderer;
 import util.XMLParser;
 
@@ -21,14 +21,10 @@ public class CountsPanel extends JPanel implements ActionListener, KeyListener, 
     JTextField searchField;
     XMLParser parser;
 
-    Calculator parent;
-
     public CountsPanel(){
-        setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
-        setBackground(Color.BLACK);
+        this.setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
+        this.setBackground(Color.BLACK);
         searchField = new JTextField();
-
-        parent = Calculator.getInstance();
 
         searchField.addKeyListener(this);
 
@@ -153,9 +149,13 @@ public class CountsPanel extends JPanel implements ActionListener, KeyListener, 
     public void mouseClicked(MouseEvent e) {
         JComponent source = (JComponent) e.getSource();
         System.out.println("Click");
+        do{
+            //System.out.println("Searching... "+source.getClass());
+            source = (JComponent) source.getParent();
+        }while(source!=null && !(source.getParent() instanceof Calculator));
 
+        Calculator parent = (Calculator) source.getParent();
         parent.mouseClicked(e);
-        parent.updateCircumstance(data.get( countList.getSelectedIndex() ) );
     }
 
     @Override
@@ -163,8 +163,14 @@ public class CountsPanel extends JPanel implements ActionListener, KeyListener, 
         if(e.getClickCount()!=1)
             return;
 
+        JComponent source = (JComponent) e.getSource();
         System.out.println("Hooooooooooooooooold");
+        do{
+            //System.out.println("Searching... "+source.getClass());
+            source = (JComponent) source.getParent();
+        }while(source!=null && !(source.getParent() instanceof Calculator));
 
+        Calculator parent = (Calculator) source.getParent();
         parent.mouseClicked(e);
     }
 

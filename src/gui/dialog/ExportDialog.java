@@ -1,7 +1,6 @@
 package gui.dialog;
 
-import data.entity.Felony;
-import util.ResourceManager;
+import entity.Felony;
 
 import javax.swing.*;
 import javax.swing.filechooser.FileNameExtensionFilter;
@@ -49,7 +48,7 @@ public class ExportDialog {
             out.writeCharacters(System.getProperty("line.separator"));
 
             out.writeStartElement("Fapte");
-            out.writeAttribute("data", ResourceManager.format(new Date()));
+            out.writeAttribute("data", Felony.format(new Date()));
             out.writeCharacters(System.getProperty("line.separator"));
 
             //TO DO: Actualizeaza progress bar aici

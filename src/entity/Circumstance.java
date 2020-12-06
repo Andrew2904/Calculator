@@ -1,4 +1,4 @@
-package data.entity;
+package entity;
 
 public class Circumstance {
     private boolean fixed, aggro;
@@ -9,7 +9,7 @@ public class Circumstance {
     private String desc;
 
     public Circumstance(){
-        fixed = false;
+        fixed = true;
         aggro = false;
 
         minJailn=maxJailn=minFinen=maxFinen=0;
@@ -46,22 +46,36 @@ public class Circumstance {
     }
 
     public float getMinFine() {
-        return (float) minFinen/minFined;
+        if(fixed)
+            return minFined;
+        else
+            return (float) minFinen/minFined;
     }
 
     public float getMaxFine() {
-        return (float) maxFinen/maxFined;
+        if(fixed)
+            return maxFined;
+        else
+            return (float) maxFinen/maxFined;
     }
 
     public float getMaxJail() {
+        if(fixed)
+            return maxJaild;
+        else
         return (float) maxJailn/maxJaild;
     }
 
     public float getMinJail() {
-        return (float) minJailn/minJaild;
+        if(fixed)
+            return minJaild;
+        else
+            return (float) minJailn/minJaild;
     }
 
     public float getMinJailRatio(){
+        if(minJaild==0)
+            return 1;
         if(aggro)
             return 1+getMinJail();
         else
@@ -69,6 +83,8 @@ public class Circumstance {
     }
 
     public float getMaxJailRatio(){
+        if(maxJaild==0)
+            return 1;
         if(aggro)
             return 1+getMaxJail();
         else
@@ -76,6 +92,8 @@ public class Circumstance {
     }
 
     public float getMinFineRatio(){
+        if(minFined==0)
+            return 1;
         if(aggro)
             return 1+getMinFine();
         else
@@ -83,6 +101,8 @@ public class Circumstance {
     }
 
     public float getMaxFineRatio(){
+        if(maxFined==0)
+            return 1;
         if(aggro)
             return 1+getMaxFine();
         else

@@ -1,4 +1,4 @@
-package data.entity;
+package entity;
 
 public class Sentence {
     private int minJail, maxJail;
@@ -110,21 +110,21 @@ public class Sentence {
     }
 
     public void mul(Circumstance s){
-         minFine = (int) (minFine * s.getMinFineRatio());
-         maxFine = (int) (maxFine * s.getMaxFineRatio());
+         minFine = Math.round(minFine * s.getMinFineRatio());
+         maxFine = Math.round(maxFine * s.getMaxFineRatio());
 
-         minJail = (int) (minJail * s.getMinJailRatio());
-         maxJail = (int) (maxJail * s.getMaxJailRatio());
+         minJail = Math.round(minJail * s.getMinJailRatio());
+         maxJail = Math.round(maxJail * s.getMaxJailRatio());
 
         order();
     }
 
     public void mul(float change){
-        minFine = (int) (minFine * change);
-        maxFine = (int) (maxFine * change);
+        minFine = Math.round(minFine * change);
+        maxFine = Math.round(maxFine * change);
 
-        minJail = (int) (minJail * change);
-        maxJail = (int) (maxJail * change);
+        minJail = Math.round(minJail * change);
+        maxJail = Math.round(maxJail * change);
 
         order();
     }

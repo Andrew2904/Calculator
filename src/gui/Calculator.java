@@ -1,12 +1,10 @@
 package gui;
 
-import data.entity.Felony;
 import gui.dialog.ExportDialog;
 import gui.dialog.ImportDialog;
 import gui.panel.CircumstancePanel;
 import gui.panel.CountsPanel;
 import gui.panel.CurrentPanel;
-import util.ResourceManager;
 
 import javax.swing.*;
 import java.awt.event.*;
@@ -18,23 +16,7 @@ public class Calculator extends JFrame implements ActionListener, MouseListener,
     CurrentPanel currentPanel;
     JPanel setupPanel;
 
-    private static Calculator instance;
-
-    private Calculator(){
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setTitle("Calculator");
-        setSize(400,400);
-        setLocation(200,200);
-        try {
-            setIconImage( ResourceManager.getIconFromResources("icon2.png").getImage() );
-        } catch (Exception e) {
-            System.err.println("Lipseste icon.ico din resurse");
-        }
-
-        setJMenuBar(getMenu());
-    }
-
-    private void buildContent(){
+    public Calculator(){
         JPanel content = (JPanel) this.getContentPane();
         content.setLayout( new BoxLayout(content, BoxLayout.X_AXIS) );
         this.addWindowListener(this);
@@ -57,23 +39,21 @@ public class Calculator extends JFrame implements ActionListener, MouseListener,
     }
 
     public static void main(String args[]){
-        Calculator frame = Calculator.getInstance();
-        frame.buildContent();
+        Calculator frame = new Calculator();
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setTitle("Calculator");
+        frame.setSize(400,400);
+        frame.setLocation(200,200);
+
+        frame.setJMenuBar(frame.getMenu());
 
         frame.setVisible(true);
     }
 
-    public static Calculator getInstance(){
-        if(instance==null)
-            instance = new Calculator();
-
-        return instance;
-    }
-
     public JMenuBar getMenu(){
         JMenuBar mb = new JMenuBar();
-        JMenu fileItem, dataItem, helpItem;
-        JMenuItem importItem, exportItem, quitItem, infoItem;
+        JMenu fileItem, dataItem;
+        JMenuItem importItem, exportItem, quitItem, helpItem;
         fileItem = new JMenu("Fisier");
         quitItem = new JMenuItem("Iesire");
         quitItem.addActionListener(this);
@@ -96,11 +76,8 @@ public class Calculator extends JFrame implements ActionListener, MouseListener,
         exportItem.addActionListener(this);
         dataItem.add(exportItem);
 
-
-        helpItem = new JMenu("Ajutor");
-        infoItem = new JMenuItem("Licenta");
-        infoItem.addActionListener(this);
-        helpItem.add(infoItem);
+        helpItem = new JMenuItem("Ajutor");
+        helpItem.addActionListener(this);
         mb.add(helpItem);
 
         return mb;
@@ -111,7 +88,7 @@ public class Calculator extends JFrame implements ActionListener, MouseListener,
         try{
             JMenuItem source = (JMenuItem) e.getSource();
             String text = source.getText();
-            if(text.equals("Licenta"))
+            if(text.equals("Ajutor"))
                 JOptionPane.showMessageDialog(this, "Placeholder pentru ajutor", "Ajutor", JOptionPane.INFORMATION_MESSAGE);
             else
             if(text.equals("Iesire"))
@@ -191,9 +168,5 @@ public class Calculator extends JFrame implements ActionListener, MouseListener,
     @Override
     public void windowDeactivated(WindowEvent e) {
 
-    }
-
-    public void updateCircumstance(Felony base){
-        circumstancePanel.updateBase(base);
     }
 }
