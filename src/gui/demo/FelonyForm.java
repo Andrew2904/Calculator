@@ -13,17 +13,19 @@ public class FelonyForm extends JPanel implements FocusListener {
     private JTextField minJailYearField, minJailMonthField, minJailDayField;
     private JTextField maxJailYearField, maxJailMonthField, maxJailDayField;
     private JTextField minFineField, maxFineField;
-    private JPanel circumstancePanel;
     private JPanel sentencePanel;
     private JPanel rootPanel;
 
     private Count currentCount;
+    private SentencePanel sp;
 
     public FelonyForm(){
         add(rootPanel);
         setVisible(false);
 
-        sentencePanel = new SentencePanel("Sentința curentă");
+        sentencePanel.setLayout(new BorderLayout());
+        sp = new SentencePanel("Sentinţa curentă");
+        sentencePanel.add(sp, BorderLayout.CENTER);
 
         descField.addFocusListener(this);
 
@@ -66,6 +68,8 @@ public class FelonyForm extends JPanel implements FocusListener {
 
         minFineField.setText( currentCount.getBase().getMinFine()+"" );
         maxFineField.setText( currentCount.getBase().getMaxFine()+"" );
+
+        showSentence(f.getBase());
     }
 
     public Count read(){
@@ -87,21 +91,25 @@ public class FelonyForm extends JPanel implements FocusListener {
         return added;
     }
 
-    private void updateSentence(){
-        //int index = felonyList.getSelectedIndex();
-
+    public Count save(){
         Count added = read();
         added.update();
 
-        ( (SentencePanel)sentencePanel ).showSentence( added.getCompound() );
-        /*
-        added.setCircumstances( cp.getCircumstances() );
+        return added;
+    }
 
-        updateFelony(added);
+    private void updateSentence(){
+        Count added = read();
+        added.update();
 
-        felonyModel.set( index, added.getDesc());
-        felonyRegister.set( index, added);
-         */
+        showSentence(added.getBase());
+
+        revalidate();
+    }
+
+    private void showSentence(Sentence s){
+        sp.showSentence( s );
+        sp.setVisible(true);
     }
 
     @Override
@@ -110,7 +118,9 @@ public class FelonyForm extends JPanel implements FocusListener {
 
     @Override
     public void focusLost(FocusEvent focusEvent) {
-        read();
+        currentCount = read();
+
+        updateSentence();
 
         sentencePanel.setVisible(true);
         sentencePanel.revalidate();

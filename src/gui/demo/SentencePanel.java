@@ -10,10 +10,14 @@ import java.awt.*;
 public class SentencePanel extends JPanel {
     private JLabel titleLabel, jailLabel, fineLabel;
     private String title;
+    private JPanel rootPanel;
 
     public SentencePanel(String title){
         this.title = title;
         int t = 5, fs=20;
+
+        add(rootPanel);
+        setVisible(false);
 
         /*
         Border mainBorder, paddingBorder;
@@ -22,20 +26,10 @@ public class SentencePanel extends JPanel {
         setBorder(paddingBorder);
          */
 
-        titleLabel = new JLabel(title);
         Font font = new Font(titleLabel.getName(), Font.PLAIN, fs);
         titleLabel.setFont(font);
-
-        jailLabel = new JLabel();
         jailLabel.setFont(font);
-
-        fineLabel = new JLabel();
         fineLabel.setFont(font);
-
-        setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
-        add(titleLabel);
-        add(jailLabel);
-        add(fineLabel);
     }
 
     public void showSentence(Sentence sentence){
@@ -56,8 +50,14 @@ public class SentencePanel extends JPanel {
     private String buildJailSentence(int years, int months, int days){
         String jailSentence = "";
 
-        jailSentence = String.format("%4d Ani, %2d Luni, %2d Zile", years, months, days);
+        jailSentence = String.format("%2d Ani, %2d Luni, %2d Zile", years, months, days);
 
         return jailSentence;
+    }
+
+    @Override
+    public void setVisible(boolean aFlag) {
+        super.setVisible(aFlag);
+        rootPanel.setVisible(aFlag);
     }
 }

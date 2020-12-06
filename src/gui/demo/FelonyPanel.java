@@ -82,9 +82,11 @@ public class FelonyPanel extends JFrame implements ActionListener, ListSelection
 
             int index = countList.getSelectedIndex();
             countModel.set(index, added.getDesc());
+            countRegister.set(index, added);
 
             //getSentence();
             //updateSentence();
+            showCount(added);
         }
         else
         if(src.getText().equals(removeButton.getText())){
