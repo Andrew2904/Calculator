@@ -327,7 +327,7 @@
           </hspacer>
         </children>
       </grid>
-      <grid id="9ca54" layout-manager="GridBagLayout">
+      <grid id="9ca54" binding="circumstancePanel" layout-manager="BorderLayout" hgap="0" vgap="0">
         <constraints border-constraint="Center"/>
         <properties/>
         <border type="none"/>

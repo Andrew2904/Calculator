@@ -1,5 +1,6 @@
 package gui.demo;
 
+import entity.Circumstance;
 import entity.Count;
 import entity.Sentence;
 
@@ -7,6 +8,8 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.FocusEvent;
 import java.awt.event.FocusListener;
+import java.util.ArrayList;
+import java.util.List;
 
 public class FelonyForm extends JPanel implements FocusListener {
     private JTextField descField;
@@ -15,9 +18,11 @@ public class FelonyForm extends JPanel implements FocusListener {
     private JTextField minFineField, maxFineField;
     private JPanel sentencePanel;
     private JPanel rootPanel;
+    private JPanel circumstancePanel;
 
     private Count currentCount;
     private SentencePanel sp;
+    private CIrcumstanceList cp;
 
     public FelonyForm(){
         add(rootPanel);
@@ -26,6 +31,9 @@ public class FelonyForm extends JPanel implements FocusListener {
         sentencePanel.setLayout(new BorderLayout());
         sp = new SentencePanel("Sentinţa curentă");
         sentencePanel.add(sp, BorderLayout.CENTER);
+
+        cp = new CIrcumstanceList();
+        circumstancePanel.add(cp, BorderLayout.CENTER);
 
         descField.addFocusListener(this);
 
@@ -69,6 +77,8 @@ public class FelonyForm extends JPanel implements FocusListener {
         minFineField.setText( currentCount.getBase().getMinFine()+"" );
         maxFineField.setText( currentCount.getBase().getMaxFine()+"" );
 
+        //cp.setCircumstances( currentCount.getCircumstances() );
+
         showSentence(f.getBase());
     }
 
@@ -84,7 +94,7 @@ public class FelonyForm extends JPanel implements FocusListener {
         read.setMaxFine( Integer.parseInt( maxFineField.getText() ));
         added.setBase(read);
 
-        //circumstances
+        currentCount.setCircumstances( cp.getCircumstances() );
 
         showCount(added);
 

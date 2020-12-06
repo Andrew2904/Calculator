@@ -11,12 +11,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="52209253-6fa0-4455-a39e-1b177776e360" name="Default Changelist" comment="GUI Rework. Acum cu formulare">
-      <change afterPath="$PROJECT_DIR$/src/gui/demo/SentencePanel.form" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/gui/demo/CIrcumstanceList.form" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/gui/demo/CIrcumstanceList.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/Concept.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/Concept.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/gui/demo/FelonyForm.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/demo/FelonyForm.form" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/gui/demo/FelonyForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/demo/FelonyForm.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/gui/demo/FelonyPanel.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/demo/FelonyPanel.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/demo/FelonyPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/demo/FelonyPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/demo/FelonyRenderer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/demo/FelonyRenderer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/demo/SentencePanel.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/demo/SentencePanel.form" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/gui/demo/SentencePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/demo/SentencePanel.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -50,8 +53,8 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="UI_DESIGNER_EDITOR_MODE.PaletteManager.SHOW" value="true" />
-    <property name="UI_DESIGNER_EDITOR_MODE.PaletteManager.WIDTH" value="169" />
-    <property name="UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH" value="246" />
+    <property name="UI_DESIGNER_EDITOR_MODE.PaletteManager.WIDTH" value="296" />
+    <property name="UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH" value="409" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="D:/Program Files/Launch4j/launch4jc.exe" />
@@ -199,7 +202,7 @@
       <workItem from="1599044851010" duration="388000" />
       <workItem from="1599132538536" duration="6177000" />
       <workItem from="1599142204966" duration="525000" />
-      <workItem from="1607265589596" duration="5123000" />
+      <workItem from="1607265589596" duration="11753000" />
     </task>
     <task id="LOCAL-00001" summary="Dialog acceptabil pentru fapte">
       <created>1586950851288</created>
@@ -272,26 +275,26 @@
       <screen x="0" y="0" width="1280" height="984" />
     </state>
     <state x="353" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1280.984@0.0.1280.984" timestamp="1599137221325" />
-    <state width="1398" height="217" key="GridCell.Tab.0.bottom" timestamp="1607270538449">
+    <state width="1398" height="217" key="GridCell.Tab.0.bottom" timestamp="1607277452074">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
     <state width="1237" height="263" key="GridCell.Tab.0.bottom/0.0.1280.984@0.0.1280.984" timestamp="1599142891122" />
-    <state width="1398" height="217" key="GridCell.Tab.0.bottom/0.0.1440.860@0.0.1440.860" timestamp="1607270538449" />
-    <state width="1398" height="217" key="GridCell.Tab.0.center" timestamp="1607270538446">
+    <state width="1398" height="217" key="GridCell.Tab.0.bottom/0.0.1440.860@0.0.1440.860" timestamp="1607277452074" />
+    <state width="1398" height="217" key="GridCell.Tab.0.center" timestamp="1607277452073">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
     <state width="1237" height="263" key="GridCell.Tab.0.center/0.0.1280.984@0.0.1280.984" timestamp="1599142891122" />
-    <state width="1398" height="217" key="GridCell.Tab.0.center/0.0.1440.860@0.0.1440.860" timestamp="1607270538446" />
-    <state width="1398" height="217" key="GridCell.Tab.0.left" timestamp="1607270538445">
+    <state width="1398" height="217" key="GridCell.Tab.0.center/0.0.1440.860@0.0.1440.860" timestamp="1607277452073" />
+    <state width="1398" height="217" key="GridCell.Tab.0.left" timestamp="1607277452072">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
     <state width="1237" height="263" key="GridCell.Tab.0.left/0.0.1280.984@0.0.1280.984" timestamp="1599142891122" />
-    <state width="1398" height="217" key="GridCell.Tab.0.left/0.0.1440.860@0.0.1440.860" timestamp="1607270538445" />
-    <state width="1398" height="217" key="GridCell.Tab.0.right" timestamp="1607270538448">
+    <state width="1398" height="217" key="GridCell.Tab.0.left/0.0.1440.860@0.0.1440.860" timestamp="1607277452072" />
+    <state width="1398" height="217" key="GridCell.Tab.0.right" timestamp="1607277452073">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
     <state width="1237" height="263" key="GridCell.Tab.0.right/0.0.1280.984@0.0.1280.984" timestamp="1599142891122" />
-    <state width="1398" height="217" key="GridCell.Tab.0.right/0.0.1440.860@0.0.1440.860" timestamp="1607270538448" />
+    <state width="1398" height="217" key="GridCell.Tab.0.right/0.0.1440.860@0.0.1440.860" timestamp="1607277452073" />
     <state width="1398" height="180" key="GridCell.Tab.1.bottom" timestamp="1607268723439">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
@@ -316,6 +319,10 @@
       <screen x="0" y="0" width="1440" height="860" />
     </state>
     <state x="100" y="99" width="1240" height="660" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog/0.0.1440.860@0.0.1440.860" timestamp="1607265288076" />
+    <state x="418" y="189" width="594" height="473" key="refactoring.ChangeSignatureDialog" timestamp="1607276669120">
+      <screen x="0" y="0" width="1440" height="860" />
+    </state>
+    <state x="418" y="189" width="594" height="473" key="refactoring.ChangeSignatureDialog/0.0.1440.860@0.0.1440.860" timestamp="1607276669120" />
     <state x="383" y="181" width="672" height="678" key="search.everywhere.popup" timestamp="1607268175697">
       <screen x="0" y="0" width="1440" height="860" />
     </state>

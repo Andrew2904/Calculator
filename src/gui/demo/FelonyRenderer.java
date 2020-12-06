@@ -23,7 +23,15 @@ public class FelonyRenderer extends JPanel implements ListCellRenderer{
         paddingBorder = BorderFactory.createCompoundBorder(mainBorder, new EmptyBorder(t, t, t, t));
         setBorder(paddingBorder);
 
-        add(new JLabel(value.toString()));
+        String strValue = value.toString();
+        String getValue;
+
+        if(strValue.length()>20)
+            getValue = String.valueOf(strValue.toCharArray(), 0, 20)+"...";
+        else
+            getValue = strValue;
+
+        add(new JLabel(getValue));
 
 
 
