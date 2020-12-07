@@ -2,7 +2,7 @@
 <form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="gui.demo.FelonyForm">
   <grid id="6ec9a" binding="rootPanel" layout-manager="BorderLayout" hgap="0" vgap="0">
     <constraints>
-      <xy x="20" y="20" width="304" height="525"/>
+      <xy x="20" y="20" width="600" height="525"/>
     </constraints>
     <properties/>
     <border type="none"/>
@@ -11,6 +11,8 @@
         <constraints border-constraint="North"/>
         <properties>
           <font size="24"/>
+          <minimumSize width="600" height="426"/>
+          <preferredSize width="600" height="426"/>
         </properties>
         <border type="none"/>
         <children>
@@ -168,7 +170,7 @@
           </component>
           <grid id="809be" layout-manager="GridBagLayout">
             <constraints>
-              <grid row="10" column="2" row-span="1" col-span="7" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+              <grid row="10" column="3" row-span="1" col-span="5" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
               <gridbag weightx="0.0" weighty="0.0"/>
             </constraints>
             <properties/>

@@ -11,16 +11,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="52209253-6fa0-4455-a39e-1b177776e360" name="Default Changelist" comment="GUI Rework. Acum cu formulare">
-      <change afterPath="$PROJECT_DIR$/src/gui/demo/CIrcumstanceList.form" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/gui/demo/CIrcumstanceList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/gui/demo/CircumstanceForm.form" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/gui/demo/CircumstanceForm.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Calculator/gui/Calculator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Calculator/gui/Calculator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Calculator/gui/dialog/CountDialog.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Calculator/gui/dialog/CountDialog.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Calculator/gui/dialog/ExportDialog.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Calculator/gui/dialog/ExportDialog.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Calculator/gui/list/CountRenderer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Calculator/gui/list/CountRenderer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Calculator/gui/panel/CountsPanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Calculator/gui/panel/CountsPanel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Calculator/util/ResourceManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Calculator/util/ResourceManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Calculator/util/XMLParser.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Calculator/util/XMLParser.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/entity/Circumstance.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/Circumstance.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/entity/Sentence.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/Sentence.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/gui/Concept.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/Concept.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/demo/CIrcumstanceList.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/demo/CircumstancePanel.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/demo/CIrcumstanceList.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/demo/CircumstancePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/demo/CircumstancePanel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/gui/demo/FelonyForm.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/demo/FelonyForm.form" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/gui/demo/FelonyForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/demo/FelonyForm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/demo/FelonyPanel.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/demo/FelonyPanel.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/demo/FelonyRenderer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/demo/FelonyRenderer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/demo/SentencePanel.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/demo/SentencePanel.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/demo/SentencePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/demo/SentencePanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/demo/FelonyPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/demo/FelonyPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/util/ResourceManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/util/ResourceManager.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,8 +63,8 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="UI_DESIGNER_EDITOR_MODE.PaletteManager.SHOW" value="true" />
-    <property name="UI_DESIGNER_EDITOR_MODE.PaletteManager.WIDTH" value="296" />
-    <property name="UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH" value="409" />
+    <property name="UI_DESIGNER_EDITOR_MODE.PaletteManager.WIDTH" value="168" />
+    <property name="UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH" value="288" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="D:/Program Files/Launch4j/launch4jc.exe" />
@@ -93,19 +103,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="Unnamed" type="JarApplication" nameIsGenerated="true">
       <option name="JAR_PATH" value="$PROJECT_DIR$/out/artifacts/Calculator_jar/Calculator.jar" />
       <option name="WORKING_DIRECTORY" value="F:\Programare\Testing\Calculator" />
@@ -118,7 +115,7 @@
       <item itemvalue="JAR Application.Unnamed" />
     </list>
   </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SpellCheckerSettings" BundledDictionaries="0" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="application-level" UseSingleDictionary="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -203,6 +200,7 @@
       <workItem from="1599132538536" duration="6177000" />
       <workItem from="1599142204966" duration="525000" />
       <workItem from="1607265589596" duration="11753000" />
+      <workItem from="1607326638901" duration="10457000" />
     </task>
     <task id="LOCAL-00001" summary="Dialog acceptabil pentru fapte">
       <created>1586950851288</created>
@@ -243,19 +241,20 @@
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="3" />
+    <option name="version" value="1" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Separat panouri" />
@@ -271,49 +270,53 @@
       <screen x="0" y="0" width="1440" height="860" />
     </state>
     <state x="203" y="6" width="1024" height="839" key="#Project_Structure/0.0.1440.860@0.0.1440.860" timestamp="1607265078092" />
-    <state x="353" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1599137221325">
+    <state x="445" y="201" key="#com.intellij.ide.util.MemberChooser" timestamp="1607331769857">
       <screen x="0" y="0" width="1280" height="984" />
     </state>
-    <state x="353" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1280.984@0.0.1280.984" timestamp="1599137221325" />
-    <state width="1398" height="217" key="GridCell.Tab.0.bottom" timestamp="1607277452074">
-      <screen x="0" y="0" width="1440" height="860" />
+    <state x="445" y="201" key="#com.intellij.ide.util.MemberChooser/0.0.1280.984@0.0.1280.984" timestamp="1607331769857" />
+    <state x="353" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1607335769956">
+      <screen x="0" y="0" width="1280" height="984" />
     </state>
-    <state width="1237" height="263" key="GridCell.Tab.0.bottom/0.0.1280.984@0.0.1280.984" timestamp="1599142891122" />
+    <state x="353" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1280.984@0.0.1280.984" timestamp="1607335769956" />
+    <state width="1237" height="325" key="GridCell.Tab.0.bottom" timestamp="1607337142988">
+      <screen x="0" y="0" width="1280" height="984" />
+    </state>
+    <state width="1237" height="325" key="GridCell.Tab.0.bottom/0.0.1280.984@0.0.1280.984" timestamp="1607337142988" />
     <state width="1398" height="217" key="GridCell.Tab.0.bottom/0.0.1440.860@0.0.1440.860" timestamp="1607277452074" />
-    <state width="1398" height="217" key="GridCell.Tab.0.center" timestamp="1607277452073">
-      <screen x="0" y="0" width="1440" height="860" />
+    <state width="1237" height="325" key="GridCell.Tab.0.center" timestamp="1607337142988">
+      <screen x="0" y="0" width="1280" height="984" />
     </state>
-    <state width="1237" height="263" key="GridCell.Tab.0.center/0.0.1280.984@0.0.1280.984" timestamp="1599142891122" />
+    <state width="1237" height="325" key="GridCell.Tab.0.center/0.0.1280.984@0.0.1280.984" timestamp="1607337142988" />
     <state width="1398" height="217" key="GridCell.Tab.0.center/0.0.1440.860@0.0.1440.860" timestamp="1607277452073" />
-    <state width="1398" height="217" key="GridCell.Tab.0.left" timestamp="1607277452072">
-      <screen x="0" y="0" width="1440" height="860" />
+    <state width="1237" height="325" key="GridCell.Tab.0.left" timestamp="1607337142988">
+      <screen x="0" y="0" width="1280" height="984" />
     </state>
-    <state width="1237" height="263" key="GridCell.Tab.0.left/0.0.1280.984@0.0.1280.984" timestamp="1599142891122" />
+    <state width="1237" height="325" key="GridCell.Tab.0.left/0.0.1280.984@0.0.1280.984" timestamp="1607337142988" />
     <state width="1398" height="217" key="GridCell.Tab.0.left/0.0.1440.860@0.0.1440.860" timestamp="1607277452072" />
-    <state width="1398" height="217" key="GridCell.Tab.0.right" timestamp="1607277452073">
-      <screen x="0" y="0" width="1440" height="860" />
+    <state width="1237" height="325" key="GridCell.Tab.0.right" timestamp="1607337142988">
+      <screen x="0" y="0" width="1280" height="984" />
     </state>
-    <state width="1237" height="263" key="GridCell.Tab.0.right/0.0.1280.984@0.0.1280.984" timestamp="1599142891122" />
+    <state width="1237" height="325" key="GridCell.Tab.0.right/0.0.1280.984@0.0.1280.984" timestamp="1607337142988" />
     <state width="1398" height="217" key="GridCell.Tab.0.right/0.0.1440.860@0.0.1440.860" timestamp="1607277452073" />
-    <state width="1398" height="180" key="GridCell.Tab.1.bottom" timestamp="1607268723439">
-      <screen x="0" y="0" width="1440" height="860" />
+    <state width="1237" height="325" key="GridCell.Tab.1.bottom" timestamp="1607337142988">
+      <screen x="0" y="0" width="1280" height="984" />
     </state>
-    <state width="1237" height="325" key="GridCell.Tab.1.bottom/0.0.1280.984@0.0.1280.984" timestamp="1599142196125" />
+    <state width="1237" height="325" key="GridCell.Tab.1.bottom/0.0.1280.984@0.0.1280.984" timestamp="1607337142988" />
     <state width="1398" height="180" key="GridCell.Tab.1.bottom/0.0.1440.860@0.0.1440.860" timestamp="1607268723439" />
-    <state width="1398" height="180" key="GridCell.Tab.1.center" timestamp="1607268723438">
-      <screen x="0" y="0" width="1440" height="860" />
+    <state width="1237" height="325" key="GridCell.Tab.1.center" timestamp="1607337142988">
+      <screen x="0" y="0" width="1280" height="984" />
     </state>
-    <state width="1237" height="325" key="GridCell.Tab.1.center/0.0.1280.984@0.0.1280.984" timestamp="1599142196125" />
+    <state width="1237" height="325" key="GridCell.Tab.1.center/0.0.1280.984@0.0.1280.984" timestamp="1607337142988" />
     <state width="1398" height="180" key="GridCell.Tab.1.center/0.0.1440.860@0.0.1440.860" timestamp="1607268723438" />
-    <state width="1398" height="180" key="GridCell.Tab.1.left" timestamp="1607268723437">
-      <screen x="0" y="0" width="1440" height="860" />
+    <state width="1237" height="325" key="GridCell.Tab.1.left" timestamp="1607337142988">
+      <screen x="0" y="0" width="1280" height="984" />
     </state>
-    <state width="1237" height="325" key="GridCell.Tab.1.left/0.0.1280.984@0.0.1280.984" timestamp="1599142196125" />
+    <state width="1237" height="325" key="GridCell.Tab.1.left/0.0.1280.984@0.0.1280.984" timestamp="1607337142988" />
     <state width="1398" height="180" key="GridCell.Tab.1.left/0.0.1440.860@0.0.1440.860" timestamp="1607268723437" />
-    <state width="1398" height="180" key="GridCell.Tab.1.right" timestamp="1607268723438">
-      <screen x="0" y="0" width="1440" height="860" />
+    <state width="1237" height="325" key="GridCell.Tab.1.right" timestamp="1607337142988">
+      <screen x="0" y="0" width="1280" height="984" />
     </state>
-    <state width="1237" height="325" key="GridCell.Tab.1.right/0.0.1280.984@0.0.1280.984" timestamp="1599142196125" />
+    <state width="1237" height="325" key="GridCell.Tab.1.right/0.0.1280.984@0.0.1280.984" timestamp="1607337142988" />
     <state width="1398" height="180" key="GridCell.Tab.1.right/0.0.1440.860@0.0.1440.860" timestamp="1607268723438" />
     <state x="100" y="99" width="1240" height="660" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1607265288076">
       <screen x="0" y="0" width="1440" height="860" />
@@ -341,13 +344,14 @@
           <line>173</line>
           <option name="timeStamp" value="21" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/util/ResourceManager.java</url>
-          <line>42</line>
-          <option name="timeStamp" value="24" />
-        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+    <watches-manager>
+      <configuration name="Application">
+        <watch expression="current.minJailn % Sentence.month_day + &quot;&quot;" language="JAVA" />
+        <watch expression="Integer.getInteger( &quot;1&quot; )" language="JAVA" />
+      </configuration>
+    </watches-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Calculator$Unnamed.ic" NAME="Unnamed Coverage Results" MODIFIED="1588526797217" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />

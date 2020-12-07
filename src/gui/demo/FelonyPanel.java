@@ -68,7 +68,7 @@ public class FelonyPanel extends JFrame implements ActionListener, ListSelection
     public void actionPerformed(ActionEvent e) {
         JButton src = (JButton) e.getSource();
 
-        if(src.getText().equals(insertButton.getText())){
+        if( src.equals(insertButton) ){
             String data = "Fapta "+ ++findex;
 
             countModel.addElement(data);
@@ -77,7 +77,7 @@ public class FelonyPanel extends JFrame implements ActionListener, ListSelection
             countRegister.add(current);
         }
         else
-        if(src.getText().equals(updateButton.getText())){
+        if( src.equals(updateButton) ){
             Count added = form.save();
 
             int index = countList.getSelectedIndex();
@@ -89,10 +89,9 @@ public class FelonyPanel extends JFrame implements ActionListener, ListSelection
             showCount(added);
         }
         else
-        if(src.getText().equals(removeButton.getText())){
+        if( src.equals(removeButton) ){
             int index = countList.getSelectedIndex();
             form.setVisible(false);
-            //felonyList.clearSelection();
 
             if(index == -1)
                 return;

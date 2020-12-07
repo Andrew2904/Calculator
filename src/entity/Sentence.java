@@ -4,7 +4,7 @@ public class Sentence {
     private int minJail, maxJail;
     private int minFine, maxFine;
 
-    private static int year_day=360, month_day=30;
+    public static int year_day=360, month_day=30;
 
     public Sentence(int minJail, int maxJail, int minFine, int maxFine){
         this.minJail = minJail;
@@ -83,16 +83,6 @@ public class Sentence {
     }
 
     public void sub(Sentence s){
-        minFine -= s.getMinFine();
-        maxFine -= s.getMaxFine();
-
-        minJail -= s.getMinJail();
-        maxJail -= s.getMaxJail();
-
-        order();
-    }
-
-    public void sub(Circumstance s){
         minFine -= s.getMinFine();
         maxFine -= s.getMaxFine();
 

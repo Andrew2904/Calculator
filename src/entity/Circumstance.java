@@ -47,28 +47,28 @@ public class Circumstance {
 
     public float getMinFine() {
         if(fixed)
-            return minFined;
+            return minFinen;
         else
             return (float) minFinen/minFined;
     }
 
     public float getMaxFine() {
         if(fixed)
-            return maxFined;
+            return maxFinen;
         else
             return (float) maxFinen/maxFined;
     }
 
     public float getMaxJail() {
         if(fixed)
-            return maxJaild;
+            return maxJailn;
         else
         return (float) maxJailn/maxJaild;
     }
 
     public float getMinJail() {
         if(fixed)
-            return minJaild;
+            return minJailn;
         else
             return (float) minJailn/minJaild;
     }
@@ -117,5 +117,37 @@ public class Circumstance {
 
     public boolean isAggro() {
         return aggro;
+    }
+
+    public int getMaxFined() {
+        return maxFined;
+    }
+
+    public int getMaxFinen() {
+        return maxFinen;
+    }
+
+    public int getMaxJaild() {
+        return maxJaild;
+    }
+
+    public int getMaxJailn() {
+        return maxJailn;
+    }
+
+    public int getMinFined() {
+        return minFined;
+    }
+
+    public int getMinFinen() {
+        return minFinen;
+    }
+
+    public int getMinJaild() {
+        return minJaild;
+    }
+
+    public int getMinJailn() {
+        return minJailn;
     }
 }

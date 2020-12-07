@@ -1,6 +1,5 @@
 package gui.demo;
 
-import entity.Circumstance;
 import entity.Count;
 import entity.Sentence;
 
@@ -8,8 +7,6 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.FocusEvent;
 import java.awt.event.FocusListener;
-import java.util.ArrayList;
-import java.util.List;
 
 public class FelonyForm extends JPanel implements FocusListener {
     private JTextField descField;
@@ -22,7 +19,7 @@ public class FelonyForm extends JPanel implements FocusListener {
 
     private Count currentCount;
     private SentencePanel sp;
-    private CIrcumstanceList cp;
+    private CircumstancePanel cp;
 
     public FelonyForm(){
         add(rootPanel);
@@ -32,7 +29,7 @@ public class FelonyForm extends JPanel implements FocusListener {
         sp = new SentencePanel("Sentinţa curentă");
         sentencePanel.add(sp, BorderLayout.CENTER);
 
-        cp = new CIrcumstanceList();
+        cp = new CircumstancePanel();
         circumstancePanel.add(cp, BorderLayout.CENTER);
 
         descField.addFocusListener(this);
@@ -77,9 +74,9 @@ public class FelonyForm extends JPanel implements FocusListener {
         minFineField.setText( currentCount.getBase().getMinFine()+"" );
         maxFineField.setText( currentCount.getBase().getMaxFine()+"" );
 
-        //cp.setCircumstances( currentCount.getCircumstances() );
+        cp.setCircumstances( currentCount.getCircumstances() );
 
-        showSentence(f.getBase());
+        showSentence(f.getCompound());
     }
 
     public Count read(){
@@ -94,7 +91,7 @@ public class FelonyForm extends JPanel implements FocusListener {
         read.setMaxFine( Integer.parseInt( maxFineField.getText() ));
         added.setBase(read);
 
-        currentCount.setCircumstances( cp.getCircumstances() );
+        added.setCircumstances( cp.getCircumstances() );
 
         showCount(added);
 
@@ -112,7 +109,7 @@ public class FelonyForm extends JPanel implements FocusListener {
         Count added = read();
         added.update();
 
-        showSentence(added.getBase());
+        showSentence(added.getCompound());
 
         revalidate();
     }
