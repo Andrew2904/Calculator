@@ -1,6 +1,6 @@
 package gui.list;
 
-import data.entity.Felony;
+import entity.Felony;
 import util.ResourceManager;
 
 import javax.swing.*;

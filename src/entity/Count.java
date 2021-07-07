@@ -1,4 +1,4 @@
-package data.entity;
+package entity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -10,6 +10,12 @@ public class Count {
 
     public Count(){
         base = new Felony();
+        compound = base.getSentence();
+        circumstances = new ArrayList<>();
+    }
+
+    public Count(Felony f){
+        base = f;
         compound = base.getSentence();
         circumstances = new ArrayList<>();
     }

@@ -1,10 +1,10 @@
-package data.entity;
+package entity;
 
 public class Sentence {
     private int minJail, maxJail;
     private int minFine, maxFine;
 
-    private static int year_day=360, month_day=30;
+    public static int year_day=360, month_day=30;
 
     public Sentence(int minJail, int maxJail, int minFine, int maxFine){
         this.minJail = minJail;
@@ -92,16 +92,6 @@ public class Sentence {
         order();
     }
 
-    public void sub(Circumstance s){
-        minFine -= s.getMinFine();
-        maxFine -= s.getMaxFine();
-
-        minJail -= s.getMinJail();
-        maxJail -= s.getMaxJail();
-
-        order();
-    }
-
     public void addCircumstance(Circumstance circumstance){
         if(circumstance.isFixed())
             add(circumstance);
@@ -110,21 +100,21 @@ public class Sentence {
     }
 
     public void mul(Circumstance s){
-         minFine = (int) (minFine * s.getMinFineRatio());
-         maxFine = (int) (maxFine * s.getMaxFineRatio());
+         minFine = Math.round(minFine * s.getMinFineRatio());
+         maxFine = Math.round(maxFine * s.getMaxFineRatio());
 
-         minJail = (int) (minJail * s.getMinJailRatio());
-         maxJail = (int) (maxJail * s.getMaxJailRatio());
+         minJail = Math.round(minJail * s.getMinJailRatio());
+         maxJail = Math.round(maxJail * s.getMaxJailRatio());
 
         order();
     }
 
     public void mul(float change){
-        minFine = (int) (minFine * change);
-        maxFine = (int) (maxFine * change);
+        minFine = Math.round(minFine * change);
+        maxFine = Math.round(maxFine * change);
 
-        minJail = (int) (minJail * change);
-        maxJail = (int) (maxJail * change);
+        minJail = Math.round(minJail * change);
+        maxJail = Math.round(maxJail * change);
 
         order();
     }
